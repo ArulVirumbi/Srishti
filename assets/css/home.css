@@ -1,0 +1,40 @@
+button {
+    position: absolute;
+    right:50px;
+    top: 20px;
+    width: 50px !important;
+   height: 50px;
+   border-radius: 50%;
+   padding:6px;
+   background-color:black;
+   color:white;
+   font-size:1.03em;
+   
+}
+button:hover{
+    width:175px !important;
+   height:50px;
+   border-radius: 10px;
+   padding: 10px;
+   background-color:black;
+   color:white;
+   transition:all 0.4s ease-in-out;
+   font-size:1.02em;
+   
+   
+}
+
+button span {
+   opacity: 0;
+}
+button:hover span {
+   opacity: 1;
+   transition: all 0.3s ease 0s;
+   
+ 
+}
+button:hover span:after {
+   content:"Login / Signup" ;
+   align-items: center;
+   
+}

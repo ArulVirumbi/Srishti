@@ -45,10 +45,13 @@
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
+
+      <?php require_once 'user.php'; ?>
+        
         <li><a href="index.html" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
-        <li><a href="about.html" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+        <li><a href="about.php" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
         <li><a href="team.html" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
         <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
       </ul>
@@ -70,27 +73,6 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
-
-    <?php
-
-    session_start();
-    if (isset($_SESSION['login'])) {
-
-        $fname = $_SESSION['fname'];
-
-    ?>
-
-        <div class="loggedin" > <?php echo $fname; ?> </div>
-
-
-    <?php 
-}
-else{ ?>
-
-        <div class="loggedout" >Not logged</div>   
-    
-<?php } ?>
-
     </div>
   </div>
 

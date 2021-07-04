@@ -26,7 +26,7 @@
   <script src="https://kit.fontawesome.com/a74d0f3882.js" crossorigin="anonymous"></script>
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/workshop.css" rel="stylesheet">
   <link href="assets/css/cards.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
@@ -45,12 +45,12 @@
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
-        <li><a href="home.html" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="index.html" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
         <li><a href="about.html" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
         <li><a href="team.html" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+        <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -72,29 +72,29 @@
       </div>
 
     <?php
-    //Initialize Session
-    
 
+    session_start();
     if (isset($_SESSION['login'])) {
 
         $fname = $_SESSION['fname'];
-        $lname = $_SESSION['lname'];
 
     ?>
 
-        <div>Hi</div>
+        <div class="loggedin" > <?php echo $fname; ?> </div>
 
 
     <?php 
 }
+else{ ?>
 
-?>
+        <div class="loggedout" >Not logged</div>   
+    
+<?php } ?>
 
     </div>
   </div>
 
   
-<!------ Include the above in your HEAD tag ---------->
 
 
 <div class="container-fluid carousal">
@@ -650,9 +650,15 @@
     </script>
 
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -660,6 +666,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

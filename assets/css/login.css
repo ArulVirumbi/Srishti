@@ -84,18 +84,24 @@ body {
   padding: 20px;
   text-align: center;
 }
-p{
-  color: #F5F5F5;
-  font-size: 13px;
+.card-body p {
+  color: #f7f7f7; 
+  font-size: 15px;
+  text-shadow:0 0 3px #FFDD03;
+}
+
+
+.enterlogin{
+  padding-bottom: 18px;
 }
 
 .box-btn {
   text-decoration: none;
   text-align: center;
- 
+  
   text-transform: uppercase;
   display: block;
-  padding: 10px;
+  padding: 20px 0 10px 0;
   font-size: 10px;
   font-weight: 500;
   background: rgba(0, 0, 0, 0);
@@ -324,6 +330,10 @@ p{
 /*# sourceMappingURL=login.css.map */
 
 
+
+#add_err1 , #add_err2{
+  color: white;
+}
 
 
 

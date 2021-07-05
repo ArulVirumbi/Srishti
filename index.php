@@ -45,7 +45,7 @@
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
-        
+        <?php require_once 'user.php'; ?>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-home"></i> <span>Home</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
         <li><a href="workshop.php" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
@@ -57,7 +57,7 @@
 
   </header>
 
-  <a href="login.php" ><button  style="width:auto;">&ensp;<i class="fa fa-sign-in"></i><span>&ensp;</span></button></a>
+  <!-- <a href="login.php" ><button  style="width:auto;">&ensp;<i class="fa fa-sign-in"></i><span>&ensp;</span></button></a> -->
 
 
 

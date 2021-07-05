@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SRiSHTi 2K21</title>
+  <title>SRiSHTi 2K21 - WORKSHOPS</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,6 +33,66 @@
 
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
   <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"   ></script>
+
+  <script type="text/javascript" >
+
+  $(document).ready(function () {
+      $("#btn_1").click(function(){
+          eventname = "KAUN BANEGA CODEPATHI";
+          //registerEvent(eventname);
+          register_alert(eventname);
+      });
+      $("#btn_2").click(function(){
+          eventname = "1337CTF";
+          //registerEvent(eventname);
+          register_alert(eventname);
+      });
+      
+    });
+    
+    
+    function register_alert(eventname){
+      alert(`You have Registered for ${eventname}`);
+  }
+
+function registerEvent(eventname)
+  {
+    $.ajax({
+                    type: "POST",
+                    url: "registered.php",
+                    data: "eventname=" + eventname ,
+                    success: function (html) {
+                        if (html == 'true') {
+
+                        /*$("#add_err").html('<div class="alert alert-success"> \
+                                <strong>Workshop</strong> Registered. \ \
+                                </div>');
+
+                        window.location.href = "index.php";*/
+
+                        register_alert(eventname);
+                        
+                        }  else if (html == 'rem') {
+                           /* $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 Already Registered. \ \
+                                                 </div>');*/
+                        alert("Already Registered");
+
+                        } else {
+                            /*$("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Error</strong> processing request. Please try again. \ \
+                                                 </div>');*/
+                            
+                            document.getElementById("add_err2").innerHTML = html;
+                        }
+  }
+
+  });
+  }
+  
+  </script>
   
 </head>
 
@@ -48,7 +108,7 @@
 
       <?php require_once 'user.php'; ?>
         
-        <li><a href="index.html" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="index.php" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
         <li><a href="about.php" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
@@ -71,7 +131,7 @@
       <div class="logo">
         <h1>WORKSHOPS</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     </div>
   </div>
@@ -280,7 +340,7 @@
       </div>
       <h4 style="font-size: 20px; color: white;">There's a treasure waiting for the winners.</h4><br>
       <!--<button class="coming_soon">Coming soon</button>-->
-      <button disbaled onclick="register(1)" id="btn_1"> Register </button>
+      <button id="btn_1"> Register </button>
   </div>
 </div>
 <div id="id-modal-2" class="modal">
@@ -632,22 +692,23 @@
     </script>
 
 
-    <!-- jQuery -->
+    <!-- jQuery 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+-->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <!--<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <!-- script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script >
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script -->
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  
 
   
 

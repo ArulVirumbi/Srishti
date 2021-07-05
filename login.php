@@ -32,7 +32,7 @@
 													<strong>Authenticated</strong> \ \
 												</div>');
 
-							window.location.href = "index.html";
+							window.location.href = "index.php";
 						  
 						  } else if (html=='false') {
 								$("#add_err1").html('<div class="alert alert-danger"> \
@@ -80,7 +80,7 @@
                                                  <strong>Account</strong> processed. \ \
                                                  </div>');
 
-                            window.location.href = "index.html";
+                            window.location.href = "index.php";
 
                         } else if (html == 'false') {
                             $("#add_err2").html('<div class="alert alert-danger"> \
@@ -118,11 +118,11 @@
                                                  </div>');
 
                         } else {
-                            /*$("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err2").html('<div class="alert alert-danger"> \
                                                  <strong>Error</strong> processing request. Please try again. \ \
-                                                 </div>');*/
+                                                 </div>');
                             
-                            document.getElementById("add_err2").innerHTML = html;
+                            /*document.getElementById("add_err2").innerHTML = html;*/
                         }
                     },
                     beforeSend: function () {
@@ -139,7 +139,7 @@
 
 
   <body>
-    <a href="index.html" ><button  class="closebtn" style="width:auto;"><i class="fas fa-times"></i></button></a>
+    <a href="index.php" ><button  class="closebtn" style="width:auto;"><i class="fas fa-times"></i></button></a>
    
     <div class="form-collection">
         <div class="card elevation-3 limit-width log-in-card below turned">

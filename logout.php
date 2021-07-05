@@ -4,5 +4,5 @@ unset($_SESSION['login']);
 unset($_SESSION['fname']);
 //unset($_SESSION['lname']);
 
-header("location:index.html?logout=true");
+header("location:index.php?logout=true");
 ?>

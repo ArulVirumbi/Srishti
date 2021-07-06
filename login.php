@@ -36,7 +36,13 @@
 						  
 						  } else if (html=='false') {
 								$("#add_err1").html('<div class="alert alert-danger"> \
-													<strong>Authentication</strong> failure. \ \
+													<strong>Email not found!</strong> \ \
+												</div>');
+								
+						  
+						  } else if (html=='pass') {
+								$("#add_err1").html('<div class="alert alert-danger"> \
+													<strong>Wrong Password!</strong> \ \
 												</div>');
 								
 						  
@@ -139,7 +145,7 @@
 
 
   <body>
-    <a href="index.php" ><button  class="closebtn" style="width:auto;"><i class="fas fa-times"></i></button></a>
+    <button  class="closebtn" title="closebtn" style="width:auto;" onclick = "history.back()"><i class="fas fa-reply"></i></button>
    
     <div class="form-collection">
         <div class="card elevation-3 limit-width log-in-card below turned">

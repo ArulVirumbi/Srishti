@@ -58,6 +58,7 @@ elseif (strlen($email) <= 4) {
 
 				$_SESSION['login'] = $mysqli->insert_id;
 				$_SESSION['fname'] = $fname;
+				$_SESSION['email'] = $email;
 				$_SESSION['mobile'] = $mobile;
 				//$_SESSION['lname'] = $lname;
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SRiSHTi 2K21 - WORKSHOPS</title>
+  <title>SRiSHTi 2K21 - EVENTS</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,12 +25,13 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a74d0f3882.js" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
   <!-- Template Main CSS File -->
-  <link href="assets/css/workshop.css" rel="stylesheet">
-  <link href="assets/css/cards.css" rel="stylesheet">
+  <link href="assets/css/events.css" rel="stylesheet">
+  <link href="assets/css/common-styles.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
-  <link href="assets/css/common-styles.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
   <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
@@ -41,43 +42,43 @@
 
   $(document).ready(function () {
       $("#btn_1").click(function(){
-          wsname = "KAUN BANEGA CODEPATHI";
-          registerEvent(wsname);
+          evname = "KAUN BANEGA CODEPATHI";
+          registerEvent(evname);
       });
       $("#btn_2").click(function(){
-          wsname = "1337CTF";
-          registerEvent(wsname);
+          evname = "1337CTF";
+          registerEvent(evname);
       });
       $("#btn_17").click(function(){
-          wsname = "CODEFEAST";
-          registerEvent(wsname);
+          evname = "CODEFEAST";
+          registerEvent(evname);
       });
       $("#btn_29").click(function(){
-          wsname = "TECHVISTARA";
-          registerEvent(wsname);
+          evname = "TECHVISTARA";
+          registerEvent(evname);
       });
       $("#btn_18").click(function(){
-          wsname = "SPACE SNAP";
-          registerEvent(wsname);
+          evname = "SPACE SNAP";
+          registerEvent(evname);
       });
       
     });
     
     
-    function register_alert(wsname){
-      alert(`You have Registered for ${wsname}`);
+    function register_alert(evname){
+      alert(`You have Registered for ${evname}`);
   }
 
-  function registerEvent(wsname)
+  function registerEvent(evname)
     {
       $.ajax({
                     type: "POST",
-                    url: "wregistered.php",
-                    data: "wsname=" + wsname ,
+                    url: "eregistered.php",
+                    data: "evname=" + evname ,
                     success: function (html) {
                         if (html == 'true') {
 
-                        register_alert(wsname);
+                        register_alert(evname);
                         
                         }  else if (html == 'rem') {
                            
@@ -111,8 +112,8 @@
       <?php require_once 'user.php'; ?>
         
         <li><a href="index.php" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
-        <li><a href="events.php" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
-        <li><a href="#" class="nav-link scrollto active"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
+        <li><a href="#" class="nav-link scrollto active"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
+        <li><a href="workshop.php" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
         <li><a href="about.php" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
         <li><a href="team.php" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
         <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
@@ -131,7 +132,7 @@
     <div class="container d-flex align-items-center justify-content-center">
 
       <div class="logo">
-        <h1>WORKSHOPS</h1>
+        <h1>EVENTS</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -141,95 +142,80 @@
   
 
 
-<div class="container-fluid carousal">
-<div id="cards" class="carousel-wrapper col-lg-12 col-sm-12">
-  <div class="carousel" data-flickity>
-    <div class="carousel-cell" id="div-11">
-      <div class="card card1">
-        <h3>Workshop 1</h3>
-        <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
-        <div class="go-corner">
-            <img class="event-logo" src="assets/img/events/18.png" alt="">
+  <div class="category-bar">
+            <nav>
+                <div id="sliding-bar"></div>
+                <a href="#category-1">Coding</a>
+                <a href="#category-2">Circuits</a>
+                <a href="#category-3">Media</a>
+            </nav>
         </div>
-      </div>
-      
-      <div class="line"></div>
-      <div class="time-and-btn">
-        <div class="dates">Day 1</div>
-        <div class="times">10:00 AM</div>
-        <button class="viewbtn" id="div-1">View More</button>
-      </div>
-    </div>
-    <div class="carousel-cell" id="div-12">
-        <div class="card card1">
-            <h3>Workshop 2</h3>
-            <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
-            <div class="go-corner">
-                <img class="event-logo" src="assets/img/events/18.png" alt="">
-            </div>
-          </div>
+       
+    <div class="eventlist">
+            
+            <div class="category" id="category-1">
+                <h2>Coding</h2><br>
+                <div class="categories">
+                <div class="nos no-1 grid-lg-3 grid-md-6 grid-sm-12 grid-xs-12 card card1" id="div-1">
+                    <h3>Event 1</h3>
+                    <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
+                    <div class="go-corner">
+                    <img class="event-logo" src="assets/img/events/18.png" alt="">
+                </div>
           
-          <div class="line"></div>
-          <div class="time-and-btn">
-            <div class="dates">Day 1</div>
-            <div class="times">2:00 PM</div>
-            <button class="viewbtn" id="div-2">View More</button>
-          </div>
-    </div>
-    <div class="carousel-cell" id="div-13">
-        <div class="card card1">
-            <h3>Workshop 3</h3>
-            <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
-            <div class="go-corner">
-                <img class="event-logo" src="assets/img/events/18.png" alt="">
+                </div>
+                <div class="nos no-2 grid-lg-3 grid-md-6 grid-sm-12 grid-xs-12 card card1" id="div-2">
+                    
+                    <h3>Event 2</h3>
+                    <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
+                    <div class="go-corner">
+                        <img class="event-logo" src="assets/img/events/18.png" alt="">
+                    </div>
+              
+                </div>
+                <div class="nos no-3 grid-lg-3 grid-md-6 grid-sm-12 grid-xs-12 card card1" id="div-3">
+                    <h3>Event 3</h3>
+                    <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
+                    <div class="go-corner">
+                        <img class="event-logo" src="assets/img/events/18.png" alt="">
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-          
-          <div class="line"></div>
-          <div class="time-and-btn">
-            <div class="dates">Day 1</div>
-            <div class="times">4:00 PM</div>
-            <button class="viewbtn" id="div-3">View More</button>
-          </div>
-    </div>
-    <div class="carousel-cell" id="div-14">
-        <div class="card card1">
-            <h3>Workshop 4</h3>
-            <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
-            <div class="go-corner">
-                <img class="event-logo" src="assets/img/events/18.png" alt="">
+
+            
+            <div class="category" id="category-2">
+                <h2>CIRCUITS</h2><br><br>
+                <div class="categories">
+                <div class="nos no-45 grid-lg-3 grid-md-6 grid-sm-12 grid-xs-12 card card1" id="div-4">
+                    <h3>Event 4</h3>
+                    <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
+                    <div class="go-corner">
+                        <img class="event-logo" src="assets/img/events/18.png" alt="">
+                    </div>
+                </div>
+                </div>
+                
             </div>
-          </div>
-          
-          <div class="line"></div>
-          <div class="time-and-btn">
-            <div class="dates">Day 2</div>
-            <div class="times">10:00 AM</div>
-            <button class="viewbtn" id="div-4">View More</button>
-          </div>
-    </div>
-    <div class="carousel-cell" id="div-15">
-        <div class="card card1">
-            <h3>Workshop 5</h3>
-            <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
-            <div class="go-corner">
-                <img class="event-logo" src="assets/img/events/18.png" alt="">
+
+            <div  id="category-3"></div>
+            <div class="category">
+                <h2>MEDIA</h2><br><br>
+                <div class="categories">
+                <div class="nos no-40 grid-lg-3 grid-md-6 grid-sm-12 grid-xs-12 card card1" id="div-5">
+                    <h3>Event 5</h3>
+                    <p class="small">What you see there? There... Behind you, Right, Left and Infront of you. What do you see? Do you get it?.</p>
+                    <div class="go-corner">
+                        <img class="event-logo" src="assets/img/events/18.png" alt="">
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-          
-          <div class="line"></div>
-          <div class="time-and-btn">
-            <div class="dates">Day 2</div>
-            <div class="times">12:00 AM</div>
-            <button class="viewbtn" id="div-5">View More</button>
-          </div>
-    </div>
-  </div>
-</div>
-</div> 
+            
+        </div>
+
 
 <?php require_once 'footer.php';?>
-
 
 
 <div id="id-modal-1" class="modal">
@@ -665,6 +651,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 -->
 
+<script type = "text/javascript">
+        var marker = document.querySelector('#sliding-bar');
+        var item = document.querySelectorAll('nav a');
+
+        function indicator(e){
+            marker.style.left = e.offsetLeft+"px";
+            marker.style.width = e.offsetWidth+"px";
+        }
+
+        item.forEach(link => {
+            link.addEventListener('click', (e)=>{
+                indicator(e.target);
+            })
+        })
+    </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -672,7 +673,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/workshops.js"></script>
+  <script src="assets/js/events.js"></script>
 
 </body>
 </html>

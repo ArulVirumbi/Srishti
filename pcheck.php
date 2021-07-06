@@ -24,12 +24,12 @@ if ($num_row >= 1) {
 
         $_SESSION['login'] = $row['id'];
         $_SESSION['fname'] = $row['fname'];
-        $_SESSION['mobile'] = $row['mobile'];
+        $_SESSION['email'] = $row['email'];
         //$_SESSION['lname'] = $row['lname'];
         echo 'true';
     }
     else {
-        echo 'false';
+        echo 'pass';
     }
 
 } else {

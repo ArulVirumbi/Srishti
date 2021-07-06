@@ -7,7 +7,7 @@
 
 ?>
 
-        <li><a href="" class="nav-link scrollto"><i class="fas fa-user"></i> <span><?php echo $fname; ?></span></a></li>
+        <li><a href="profile.php" class="nav-link scrollto"><i class="fas fa-user"></i> <span><?php echo $fname; ?></span></a></li>
 
 <?php   } else {
 ?>

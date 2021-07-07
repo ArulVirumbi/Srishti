@@ -674,6 +674,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/events.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>

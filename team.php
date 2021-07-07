@@ -158,6 +158,32 @@
 
 <?php require_once 'footer.php';?>
 
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var header2 = document.getElementById("header2");
+    var sticky2 = header2.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky2) {
+        header2.classList.add("fixed-top");
+      } else {
+        header2.classList.remove("fixed-top");
+      }
+    }
+    </script>
+
+    <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 
 </body>
 

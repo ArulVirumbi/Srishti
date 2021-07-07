@@ -147,6 +147,11 @@
   <body>
     <button  class="closebtn" title="closebtn" style="width:auto;" onclick = "history.back()"><i class="fas fa-reply"></i></button>
    
+    <div>
+	<input type="checkbox" id="toggle"/>
+	<label for="toggle"></label>
+</div>
+
     <div class="form-collection">
         <div class="card elevation-3 limit-width log-in-card below turned">
           <div class="card-body">

@@ -11,9 +11,7 @@
 
   <!-- Favicons -->
   
-  <link rel = "icon" href = 
-"assets/img/logo.png" 
-        type = "image/x-icon">
+  <link rel = "icon" href = "assets/img/logo.png" type = "image/x-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
@@ -32,8 +30,15 @@
   <link href="assets/css/about.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
-  <link href="assets/css/common-styles.css" rel="stylesheet">
+  <!--link href="assets/css/common-styles.css" rel="stylesheet"-->
   
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 
 
   
@@ -42,6 +47,10 @@
 
 <body>
 
+   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+   <!--i class="bi bi-list mobile-nav-toggle d-xl-none" style="background: -webkit-linear-gradient(#5afacb, #f64655);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"></i-->
   <i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #d8a31c"></i>
 
   <header id="header" class="d-flex flex-column justify-content-center">
@@ -51,7 +60,7 @@
       <?php require_once 'user.php'; ?>
         <li><a href="index.php" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
         <li><a href="events.php" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
-        <li><a href="workshop.php" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
+        <li><a href="workshop.php" class="nav-link scrollto "><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
         <li><a href="team.php" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
         <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
@@ -59,7 +68,6 @@
     </nav><!-- .nav-menu -->
 
   </header>
-   
 
   <div  id="header2" class="d-flex align-items-center header2 fixed-top">
     <div class="container d-flex align-items-center justify-content-center">
@@ -67,188 +75,212 @@
       <div class="logo">
         <h1>ABOUT</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     </div>
   </div>
 
- 
-  <!-- ======= Hero Section ======= -->
+  <div class= "container-fluid">
+  <div class="about-main">
+    <h1>Srishti 2k21<br>IEEE STUDENTS CHAPTER 12836<br><br><span></span></h1>
+    <div class="backShapes">
+      <span><i class="plus"> </i></span>
+      <span><i class="circ"> </i></span>
+      <span><i class="plus"> </i></span>
+      <span><i class="circ"> </i></span>
+        <span><i class="plus"> </i></span>
+     
   
-    <!-- ======= About Us Section ======= -->
-       <section class="u-section-1" id="sec-9cca">
-      <div class=" u-shape-1"></div>
-      <div class=" u-shape-2"></div>
-      <div class=" u-shape-3"></div>
-      <img class="u-image-1" src="assets/img/psg.jpeg" data-image-width="800" data-image-height="828"data-aos="fade-up" data-aos-delay="100">
-      <div class=" u-group-1">
-        <div class=" u-container-layout-1"data-aos="fade-up" data-aos-delay="100">
-          <h1 class=" u-text-1">Shristi 2K21</h1>
-          <p class=" u-text-2">SRISHTI is an annual technical symposium organised by IEEE Students' Chapter 12951 of PSG College of Technology. Going by the phrase, "unleash the talent within" , Srishti brings out the creme de la creme of the student's community through an diverse array of events. The Symposium is home to multiple technical and non technical events, workshops project and paper presentations. Explore your interests and elevate your skills.</p>
-         
-        </div>
+    </div>
+
+    <div class="bottomPart animateIn">
+      <div class="floatingText animateIn" >
+        <h2>Be Creative and<br>Always have fun!</h2>
+      <p>Join us in our make the world a little more colourful and a little less dull. We work hard to bring creative work and imaginative pojects into this world. Parturient felis consequat id wisi, posuere id suscipit sed elit, nunc tellus, ut ut et quis. Dictum amet ultrices dictum sed libero ipsum, lobortis ut vitae dolor in donec. Pellentesque turpis vel tempor. Eu est mattis praesentium perspiciatis quis natoque, mauris rhoncus. </p>
+        <a class="buttonLink">More Info</a>
       </div>
-    </section>
-
-    <section id="about" class="about">
-     
- 
-     
-     
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 video-box">
-            <img src="assets/img/ieee.jpg" class="img-fluid" alt="">
-            
-          </div>
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
-
-            <div class="section-title">
-              <h2>IEEE</h2>
-              <p>IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE's core purpose is to foster technological innovation and excellence for the benefit of humanity. IEEE will be essential to the global technical community and to technical professionals everywhere, and be universally recognized for the contributions of technology and of technical professionals in improving global condition</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class='bx bxs-right-arrow-alt'></i></div>
-              <h4 class="title"><a href="" >VISIT US</a></h4>
-            </div>
-          </div>
-          
-        </div>
-
-     
-      </div>
+      <img src="assets/img/psg.jpg" >
+      <span class="gradLine animateIn"></span>
+    </div>
   
-     
-
-        
-
-      
-    </section><!-- End About Us Section -->
-
-    <!-- ======= About Lists Section ======= -->
-    <section class="about-lists">
-      <div class="container">
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
-            <span><h3>01</h3></span>
-            <h4>Lorem Ipsum</h4>
-            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-           <span> <h3>02</h3></span>
-            <h4>Repellat Nihil</h4>
-            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span><h3>03</h3></span>
-            <h4> Ad ad velit qui</h4>
-            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-          </div>
-
-
-        </div>
-
+  <div class="bottomPart reverse animateIn">
+      <div class="floatingText animateIn" >
+        <h2>When in doubt<br>just smile away.</h2>
+      <p>It's a proven fact that smiling makes you smile. Posuere id suscipit sed elit, nunc tellus, ut ut et quis. Dictum amet ultrices dictum sed libero ipsum, lobortis ut vitae dolor in donec. Pellentesque turpis vel tempor. Eu est mattis praesentium perspiciatis quis natoque, mauris rhoncus.</p>
+        <a class="buttonLink">More Info</a>
       </div>
-    </section><!-- End About Lists Section -->
+      <img src="assets/img/ieee.jpg">
+    <span class="gradLine animateIn"></span>
+    </div>
 
-    <!-- ======= Counts Section ======= -->
-    <section class="counts section-bg">
+
+    
       <div class="container">
-
         <div class="row">
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
-              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Technical events</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="counter">
+                    <div class="counter-icon">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <h3>Technical events</h3>
+                    <span class="counter-value">25</span>
+                </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-document-folder" style="color: #c042ff;"></i>
-              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Non technical events</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="counter orange">
+                    <div class="counter-icon">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                    <h3>Non-technical events</h3>
+                    <span class="counter-value">25</span>
+                </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
-            <div class="count-box">
-              <i class="bi bi-live-support" style="color: #46d1ff;"></i>
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="50" class="purecounter" ></span>
-              <p>workshop</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="counter green">
+                    <div class="counter-icon">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                    <h3>workshop</h3>
+                    <span class="counter-value">6</span>
+                </div>
             </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
-            <div class="count-box">
-              <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p>paper presentation</p>
+            <div class="col-md-3 col-sm-6">
+                <div class="counter blue">
+                    <div class="counter-icon">
+                        <i class="fa fa-rocket"></i>
+                    </div>
+                    <h3>paper presentation</h3>
+                    <span class="counter-value">4</span>
+                </div>
             </div>
-          </div>
-
         </div>
+    </div>
 
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Services Section ======= -->
+      <!-- ======= Services Section ======= -->
     <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Our Works </h2>
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h1><u>OUR WORKS </u></h1>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
+              <div class="title"><a href="events.html">events</a></div>
+              <p class="description">look into our wide range of technical and non technical events</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bi bi-bounding-box"></i></div>
+              <div class="title"><a href="index.html">workshop</a></div>
+              <p class="description">Bored at home , come and discover yourself</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-globe"></i></div>
+              <div class="title"><a href="index.html">paper presentation</a></div>
+              <p class="description">present and prove yourself worthy</p>
+            </div>
+            
+        
+          </div>
+  
         </div>
+      </section><!-- End Services Section -->
+    
+  </div>
+</div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
-            <h4 class="title"><a href="">events</a></h4>
-            <p class="description">look into our wide range of technical and non technical events</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-bounding-box"></i></div>
-            <h4 class="title"><a href="">workshop</a></h4>
-            <p class="description">Bored at home , come and discover yourself</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-globe"></i></div>
-            <h4 class="title"><a href="">paper presentation</a></h4>
-            <p class="description">present and prove yourself worthy</p>
-          </div>
-          
-      
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-
-    <?php require_once 'footer.php';?>
+    
    
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <?php require_once 'footer.php';?>
+  <!-- Vendor JS Files 
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>-->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/about.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    var lastScrollTop = 0;
+ var lineheight = 50;
+ $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+   
+     var lineTop = $('h1 span').scrollTop();
+   
+    if (st > lastScrollTop){
+        // downscroll code
+      $('.backShapes span i').css({transform: "rotate(" + st/5 + "deg)" });
+      
+      if (st > lineTop && lineheight< 550){
+       lineheight = lineheight + 10;
+       $('h1 span').css('height',lineheight+'px');
+      }
+          
+    } else {
+       // upscroll code
+      $('.backShapes span i').css({transform: "rotate(" + st/5 + "deg)" });
+ 
+      if (st > lineTop && lineheight>50){
+        lineheight = lineheight - 10;
+       $('h1 span').css('height',lineheight+'px');
+      }
+    }
+    lastScrollTop = st;
+   
+   checkAnimateIn(st);
+ });
+ 
+ function checkAnimateIn(st){
+   var pageHeight = $(window).height();
+   var triggerPoint = pageHeight/2 + st;
+   $('.animateIn').each(function(){
+     var aniTop = $(this).offset().top;
+     console.log(aniTop, triggerPoint);
+     if(aniTop < triggerPoint){
+       $(this).addClass('open');
+     }else{
+       $(this).removeClass('open');
+     }
+   });
+ }
+ 
+ 
+  </script>
+  <script>
+      $(document).ready(function(){
+    $('.counter-value').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 3500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
+  </script>
 
  
    

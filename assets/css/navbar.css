@@ -73,8 +73,9 @@
   /**
   * Desktop Navigation 
   */
+  
   .nav-menu {
-    padding: 0;
+    padding: 0 !important;
     display: block;
   }
   

@@ -672,7 +672,8 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/workshops.js"></script>
+  <script src="assets/js/workshop.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 
 
-$(document).on('click', '.below center', function(){
+$(document).on('click', '#toggle', function(){
     var belowCard = $('.below'),
     aboveCard = $('.above'),
     parent = $('.form-collection');

@@ -1,3 +1,8 @@
+<?php
+@ob_start();
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +34,79 @@
   <link href="assets/css/footer.css" rel="stylesheet">
   <link href="assets/css/common-styles.css" rel="stylesheet">
 
+
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"   ></script>
+	
+	<script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#contact").click(function () {
+
+                fname = $("#fname").val();
+                email = $("#email").val();
+                message = $("#message").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "sendmsg.php",
+                    data: "fname=" + fname + "&email=" + email + "&message=" + message,
+                    success: function (html) {
+                        if (html == 'true') {
+
+                            $("#add_err2").html('<div class="alert alert-success"> \
+                                                 <strong>Message Sent!</strong> \ \
+                                                 </div>');
+
+                        } else if (html == 'fname_long') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>First Name</strong> must cannot exceed 50 characters. \ \
+                                                 </div>');
+						
+						} else if (html == 'fname_short') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>First Name</strong> must exceed 2 characters. \ \
+                                                 </div>');
+												 
+						} else if (html == 'email_long') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Email</strong> must cannot exceed 50 characters. \ \
+                                                 </div>');
+						
+						} else if (html == 'email_short') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Email</strong> must exceed 2 characters. \ \
+                                                 </div>');
+												 
+						} else if (html == 'eformat') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Email</strong> format incorrect. \ \
+                                                 </div>');
+												 
+						} else if (html == 'message_long') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Message</strong> must cannot exceed 50 characters. \ \
+                                                 </div>');
+						
+						} else if (html == 'message_short') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Message</strong> must exceed 2 characters. \ \
+                                                 </div>');
+
+
+                        } else {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Error</strong> processing request. Please try again. \ \
+                                                 </div>');
+                        }
+                    },
+                    beforeSend: function () {
+                        $("#add_err2").html("loading...");
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
 
   </head>
 
@@ -112,10 +190,11 @@
           </div>
 
           <div class="col-lg-6">
+          <div id="add_err2"></div>
             <form action="forms/contact.php" method="post" role="form" class="php-email-form  effect7">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="fname" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -125,14 +204,14 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" id="contact">Send Message</button></div>
             </form>
           </div>
 

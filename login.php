@@ -153,26 +153,38 @@
 </div>
 
     <div class="form-collection">
-        <div class="card elevation-3 limit-width log-in-card below turned">
+      <form>
+        <div class="card elevation-3 limit-width log-in-card above ">
           <div class="card-body">
            <p class="text-muted enterlogin" > Please enter your login and password!</p>
            <div id="add_err1"></div>
+           <?php 
+
+           if(isset($_GET["newpwd"])) {
+             if($_GET["newpwd"] == "passwordupdated"){
+               echo '<div class="rpwdsuccess" style="color: white">Your password has been reset!</div>';
+             }
+           }
+           
+           
+           ?>
             <div class="input-group email">
               <input id="email" type="text" placeholder="Email"/>
             </div>
             <div class="input-group password">
               <input id="password" type="password" placeholder="Password"/>
             </div>
-            <a href="#" class="box-btn" id="forgotpass" >Forgot Password?</a>
+            <a href="resetpass.php" class="box-btn" id="forgotpass" >Forgot Password?</a>
           </div>
           <div class="card-footer" >
           <center>  <button  type="submit" class="login-btn" id="login">Log in</button></center>
           </div>
         </div>
+      </form>
       
 
-      
-        <div class="card elevation-2 limit-width sign-up-card above">
+      <form>
+        <div class="card elevation-2 limit-width sign-up-card below turned">
           <div class="card-body">
            <p class="text-muted" > Please enter your credentials</p>
            <div id="add_err2"></div>
@@ -185,6 +197,9 @@
             <div class="input-group fullname">
               <input id="mobile" type="text" placeholder="Mobile Number"/>
             </div>
+            <div class="input-group file">
+              <input id="file" type="file" placeholder="Choose file"/>
+            </div>
             <div class="input-group password">
               <input id="upassword" type="password" placeholder="Password"/>
             </div>
@@ -193,6 +208,7 @@
           <center>  <button id="register" type="submit" class="signup-btn">Sign Up</button></center>
           </div>
         </div>
+      </form>
       </div>
       
 <div id="particles-js"></div>

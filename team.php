@@ -20,6 +20,7 @@ session_start();
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 
    <!-- Vendor CSS Files -->
    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -38,31 +39,29 @@ session_start();
 
 <body>
 
-<i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #d8a31c"></i>
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
 <header id="header" class="d-flex flex-column justify-content-center">
 
   <nav id="navbar" class="navbar nav-menu">
-    <ul>
+  <ul>
 
-    <?php require_once 'user.php'; ?>
-      
-      <li><a href="index.php" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
-      <li><a href="events.php" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
-      <li><a href="workshop.php" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
-      <li><a href="about.php" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
-      <li><a href="#" class="nav-link scrollto active"><i class="fas fa-users"></i> <span>Team</span></a></li>
-      <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
-    </ul>
+<?php require_once 'user.php'; ?>
+  
+  <li><a href="HOME" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
+  <li><a href="EVENTS" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
+  <li><a href="WORKSHOPS" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
+  <li><a href="ABOUT" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+  <li><a href="#" class="nav-link scrollto active"><i class="fas fa-users"></i> <span>Team</span></a></li>
+  <li><a href="FAQ" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ</span></a></li>
+  <li><a href="CONTACT" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+</ul>
   </nav><!-- .nav-menu -->
 
 </header>
 
-<section id="hero" class="d-flex flex-column align-items-center justify-content-center">
-    <h1>SRiSHTi  2k21</h1>
-    <h2>IEEE STUDENTS CHAPTER 12951</h2>
-    <a href="#header2" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
-  </section>
+
+<?php require_once 'header.php';?>
 
   <div  id="header2" class="d-flex align-items-center header2 ">
     <div class="container d-flex align-items-center justify-content-center">
@@ -74,7 +73,7 @@ session_start();
       </div>
     </div>
   </div>
-
+<div class="container-fluid">
   <div class="container d-flex justify-content-center">
     <div class="row">
         <div class="col-md-4">
@@ -159,26 +158,13 @@ session_start();
         </div>
     </div>
 </div>
-
+</div>
 
 <?php require_once 'footer.php';?>
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<script>
-    window.onscroll = function() {myFunction()};
-    
-    var header2 = document.getElementById("header2");
-    var sticky2 = header2.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky2) {
-        header2.classList.add("fixed-top");
-      } else {
-        header2.classList.remove("fixed-top");
-      }
-    }
-    </script>
+
 
     <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

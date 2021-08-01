@@ -35,7 +35,7 @@ $(document).on('click', '#toggle', function(){
             }
           },
           "color": {
-            "value": "#FCC201"
+            "value": "#66FCF1"
           },
           "shape": {
             "type": "circle",

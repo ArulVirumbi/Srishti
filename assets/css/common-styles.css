@@ -8,6 +8,206 @@ body {
     overflow-x: hidden;
 }
 
+/*--------------------------------------------------------------
+  # Header 2
+  --------------------------------------------------------------*/
+  
+#hero {
+    width: 100%;
+    height: 75vh;
+    background: #0b0c10;
+    background-size: cover;
+    background-position: 75px;
+    padding: 0 15px;
+    z-index:0;
+    position: relative;
+  }
+  #hero::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    z-index: -1;
+  }
+  
+  #hero .image {
+    height:auto;
+    width:600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* #hero .image1 {
+    margin: auto;
+    text-align: center;
+    height:210px;
+    width:500px;
+  }*/
+  
+  #hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    font-family: 'GILC____';
+    font-style: bold;
+  }@font-face {
+    font-family: 'GILC____';
+    font-style: normal;
+    src: url("../fonts/GILC____.TTF");
+  }
+  
+  
+  #hero h2 {
+    color:#66fcf1;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 300;
+    font-style: bold;
+    text-align: center;
+  }
+  
+  #hero .btn-get-started {
+    font-size: 64px;
+    transition: 0.5s;
+    color: #66fcf1;
+    height: 60px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #hero .btn-get-started:hover {
+    padding-top: 10px;
+    color: #c5c6c7;
+    margin: auto;
+  }
+  
+/*
+  #hero {
+    width: 100%;
+    height: 75vh;
+    background-color: white !important;
+    background: url("../img/hero-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 75px;
+    padding: 0 15px;
+    z-index:0;
+    position: relative;
+  }
+  #hero::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    z-index: -1;
+}
+  
+  #hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgb(255, 255, 255);
+    text-shadow:0 0 3px  #FFDD03;
+  }
+  
+  #hero h2 {
+    color: gold;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #hero .btn-get-started {
+    font-size: 64px;
+    transition: 0.5s;
+    color: #eccb7a;
+    height: 60px;
+  }
+  
+  #hero .btn-get-started:hover {
+    padding-top: 10px;
+    color: #cc9442;
+  }*/
+  
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero h2 {
+      text-align: center;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+
+.header2 {
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    height: 60px;
+    background: #000;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  
+  
+  .header2 .logo h1 {
+    font-size: 26px;
+    margin: 0;
+    padding: 6px 0;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 2px 3px #66fcf1;
+  }
+  
+  .header2 .logo h1 a {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 7px ;
+  }
+  
+  .header2 .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .container-fluid {
+    padding-top: 64px !important;
+  }  
+  
+
+
 /*Small screen*/
 @media (max-width: 576px) {
     .grid-xs-1 {
@@ -200,11 +400,11 @@ body {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #ac1b63; 
+    background: #45a29e; 
     border-radius: 40px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #EB167F;
+    background: #66fcf1;
   }

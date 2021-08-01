@@ -28,7 +28,7 @@ session_start();
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a74d0f3882.js" crossorigin="anonymous"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"   ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <link href="assets/css/resetpass.css" rel="stylesheet">
   <link href="assets/css/common-styles.css" rel="stylesheet">
@@ -96,14 +96,6 @@ session_start();
                 <input id="email" type="text" name="email" placeholder="Enter your email address..." />
                 <button id="request" type="submit" >Submit</button>
             </form>
-            
-            <!--?php
-                if(isset($_GET["reset"])) {
-                    if ($_GET["reset"] == "success") {
-                        echo '<p class="fpsuccess">Check your Mail!</p>';
-                    }
-                }
-            ?-->
         </section>  
     </div>
 

@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteRule ^LOGIN login.php [NC,L]
+RewriteRule ^HOME index.php [NC,L]
+RewriteRule ^EVENTS events.php [NC,L]
+RewriteRule ^WORKSHOPS workshop.php [NC,L]
+RewriteRule ^ABOUT about.php [NC,L]
+RewriteRule ^CONTACT contact.php [NC,L]
+RewriteRule ^PROFILE profile.php [NC,L]
+RewriteRule ^FAQ faq.php [NC,L]
+RewriteRule ^TEAM team.php [NC,L]

@@ -35,14 +35,12 @@ session_start();
   <link href="assets/css/about.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
-  <!--link href="assets/css/common-styles.css" rel="stylesheet"-->
+  <link href="assets/css/common-styles.css" rel="stylesheet">
   
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
 <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
 
 
@@ -52,29 +50,28 @@ session_start();
 
 <body>
 
-   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-   <!--i class="bi bi-list mobile-nav-toggle d-xl-none" style="background: -webkit-linear-gradient(#5afacb, #f64655);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;"></i-->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #d8a31c"></i>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #66fcf1"></i>
 
   <header id="header" class="d-flex flex-column justify-content-center">
 
     <nav id="navbar" class="navbar nav-menu">
-      <ul>
+    <ul>
       <?php require_once 'user.php'; ?>
-        <li><a href="index.php" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
-        <li><a href="events.php" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
-        <li><a href="workshop.php" class="nav-link scrollto "><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
+        <li><a href="HOME" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="EVENTS" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
+        <li><a href="WORKSHOPS" class="nav-link scrollto "><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
-        <li><a href="team.php" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
-        <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+        <li><a href="TEAM" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
+      <li><a href="FAQ" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ</span></a></li>
+        <li><a href="CONTACT" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
   </header>
 
-  <div  id="header2" class="d-flex align-items-center header2 fixed-top">
+  <?php require_once 'header.php';?>
+
+  <div  id="header2" class="d-flex align-items-center header2">
     <div class="container d-flex align-items-center justify-content-center">
 
       <div class="logo">
@@ -85,44 +82,169 @@ session_start();
     </div>
   </div>
 
-  <div class= "container-fluid">
-  <div class="about-main">
-    <h1>Srishti 2k21<br>IEEE STUDENTS CHAPTER 12836<br><br><span></span></h1>
-    <div class="backShapes">
-      <span><i class="plus"> </i></span>
-      <span><i class="circ"> </i></span>
-      <span><i class="plus"> </i></span>
-      <span><i class="circ"> </i></span>
-        <span><i class="plus"> </i></span>
-     
-  
-    </div>
+<div class= "container-fluid main-container">
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
 
-    <div class="bottomPart animateIn">
-      <div class="floatingText animateIn" >
-        <h2>Be Creative and<br>Always have fun!</h2>
-      <p>Join us in our make the world a little more colourful and a little less dull. We work hard to bring creative work and imaginative pojects into this world. Parturient felis consequat id wisi, posuere id suscipit sed elit, nunc tellus, ut ut et quis. Dictum amet ultrices dictum sed libero ipsum, lobortis ut vitae dolor in donec. Pellentesque turpis vel tempor. Eu est mattis praesentium perspiciatis quis natoque, mauris rhoncus. </p>
-        <a class="buttonLink">More Info</a>
+  <div class="container-fluid" data-aos="fade-up">
+
+   
+    <!-- Feature Tabs -->
+    <div class="row feture-tabs" data-aos="fade-up">
+      <div class="col-lg-6 head-titles">
+      
+        <h3>Shristi 2k21</h3>
+      
+        <!-- Tabs -->
+        <ul class="nav nav-pills mb-3">
+          <li>
+            <a class="nav-link active" data-bs-toggle="pill" href="#tab1">About</a>
+          </li>
+          <li>
+            <a class="nav-link" data-bs-toggle="pill" href="#tab2">When</a>
+          </li>
+          <li>
+            <a class="nav-link" data-bs-toggle="pill" href="#tab3">where</a>
+          </li>
+        </ul><!-- End Tabs -->
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+          <div class="tab-pane fade show active" id="tab1">
+            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-check2"></i>
+              <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+            </div>
+            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-check2"></i>
+              <h4>Incidunt non veritatis illum ea ut nisi</h4>
+            </div>
+            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+          </div><!-- End Tab 1 Content -->
+
+          <div class="tab-pane fade show" id="tab2">
+            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-check2"></i>
+              <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+            </div>
+            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-check2"></i>
+              <h4>Incidunt non veritatis illum ea ut nisi</h4>
+            </div>
+            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+          </div><!-- End Tab 2 Content -->
+
+          <div class="tab-pane fade show" id="tab3">
+            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-check2"></i>
+              <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+            </div>
+            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-check2"></i>
+              <h4>Incidunt non veritatis illum ea ut nisi</h4>
+            </div>
+            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+          </div><!-- End Tab 3 Content -->
+
+        </div>
+
       </div>
-      <img src="assets/img/psg.jpg" >
-      <span class="gradLine animateIn"></span>
-    </div>
-  
-  <div class="bottomPart reverse animateIn">
-      <div class="floatingText animateIn" >
-        <h2>When in doubt<br>just smile away.</h2>
-      <p>It's a proven fact that smiling makes you smile. Posuere id suscipit sed elit, nunc tellus, ut ut et quis. Dictum amet ultrices dictum sed libero ipsum, lobortis ut vitae dolor in donec. Pellentesque turpis vel tempor. Eu est mattis praesentium perspiciatis quis natoque, mauris rhoncus.</p>
-        <a class="buttonLink">More Info</a>
+
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <img src="assets/img/psg1.jpg" class="img-fluid" alt="" width="1000px" height="800px">
       </div>
-      <img src="assets/img/ieee.jpg">
-    <span class="gradLine animateIn"></span>
-    </div>
+
+    </div><!-- End Feature Tabs -->
 
 
     
-      <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
+
+    <div class="row" id="second_about" data-aos="fade-up">
+
+      <div class="col-lg-6">
+        <img src="assets/img/ieee.jpg" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+        <div class="row align-self-center gy-4 cont-row">
+           
+          <div class="d-flex align-items-center mb-2 title-head" >
+            
+            <h4>IEEE STUDENTS CHAPTER 12951</h4>
+          </div>
+          <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.<br>
+          Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+          
+            
+          
+          <div class="text-center text-lg-start">
+            <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Read More</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+      </div>
+
+    </div> <!-- / row -->
+
+    
+    
+
+  </div>
+
+</section><!-- End Features Section -->
+
+
+
+
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row gx-0">
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="content">
+            <h3>Who We Are</h3>
+            <h2>PSG College Of Technology</h2>
+            <p>
+              Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+            <br>
+            Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inve
+            </p>
+            
+            <div class="text-center text-lg-start">
+              <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Read More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/psg.jpg" class="img-fluid" alt="">
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- End About Section -->
+
+    
+
+    
+  <div class="container" data-aos="fade-up">
+        <div class="row padtb">
+            <div class="col-md-3 col-sm-6 counterbox">
                 <div class="counter">
                     <div class="counter-icon">
                         <i class="fa fa-globe"></i>
@@ -131,7 +253,8 @@ session_start();
                     <span class="counter-value">25</span>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            
+            <div class="col-md-3 col-sm-6 counterbox">
                 <div class="counter orange">
                     <div class="counter-icon">
                         <i class="fa fa-rocket"></i>
@@ -140,7 +263,7 @@ session_start();
                     <span class="counter-value">25</span>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 counterbox">
                 <div class="counter green">
                     <div class="counter-icon">
                         <i class="fa fa-rocket"></i>
@@ -149,7 +272,7 @@ session_start();
                     <span class="counter-value">6</span>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-6 counterbox">
                 <div class="counter blue">
                     <div class="counter-icon">
                         <i class="fa fa-rocket"></i>
@@ -162,39 +285,54 @@ session_start();
     </div>
 
       <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+      <section id="services" class="services section-bg">
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
-            <h1><u>OUR WORKS </u></h1>
+            <h2>OUR WORKS</h2>
           </div>
   
           <div class="row">
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-              <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
-              <div class="title"><a href="events.html">events</a></div>
-              <p class="description">look into our wide range of technical and non technical events</p>
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="">TECHNICAL EVENTS</a></h4>
+                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-bounding-box"></i></div>
-              <div class="title"><a href="index.html">workshop</a></div>
-              <p class="description">Bored at home , come and discover yourself</p>
+  
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">NON-TECHNICAL EVENTS</a></h4>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-globe"></i></div>
-              <div class="title"><a href="index.html">paper presentation</a></div>
-              <p class="description">present and prove yourself worthy</p>
+  
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">WORKSHOP</a></h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              </div>
             </div>
-            
-        
+  
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-layer"></i></div>
+                <h4><a href="">PAPER PRESENTATION</a></h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              </div>
+            </div>
+  
           </div>
   
         </div>
-      </section><!-- End Services Section -->
+      </section>
     
   </div>
 </div>
-
+</div>
     
    
 
@@ -218,59 +356,13 @@ session_start();
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    var lastScrollTop = 0;
- var lineheight = 50;
- $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-   
-     var lineTop = $('h1 span').scrollTop();
-   
-    if (st > lastScrollTop){
-        // downscroll code
-      $('.backShapes span i').css({transform: "rotate(" + st/5 + "deg)" });
-      
-      if (st > lineTop && lineheight< 550){
-       lineheight = lineheight + 10;
-       $('h1 span').css('height',lineheight+'px');
-      }
-          
-    } else {
-       // upscroll code
-      $('.backShapes span i').css({transform: "rotate(" + st/5 + "deg)" });
- 
-      if (st > lineTop && lineheight>50){
-        lineheight = lineheight - 10;
-       $('h1 span').css('height',lineheight+'px');
-      }
-    }
-    lastScrollTop = st;
-   
-   checkAnimateIn(st);
- });
- 
- function checkAnimateIn(st){
-   var pageHeight = $(window).height();
-   var triggerPoint = pageHeight/2 + st;
-   $('.animateIn').each(function(){
-     var aniTop = $(this).offset().top;
-     console.log(aniTop, triggerPoint);
-     if(aniTop < triggerPoint){
-       $(this).addClass('open');
-     }else{
-       $(this).removeClass('open');
-     }
-   });
- }
  
  
-  </script>
+  
   <script>
       $(document).ready(function(){
     $('.counter-value').each(function(){

@@ -8,187 +8,77 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    color: #272829;
-    background: linear-gradient(-45deg, #ee7752, #f34d8d, #23a6d5, #23d5ab);
-    background-size: 300% 300%;
-    animation: gradient 15s ease infinite;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background: #1f2833;
+  background-size: 300% 300%;
+  
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+
+a {
+  color: #66fcf1;
+  text-decoration: none;
 }
-    /*background-color:#746bff ;
-    background-image:
-    radial-gradient(
-      circle closest-side,
-      gold 40%,
-       100%
-    );
-    
-  }*/
+
+a:hover {
+  color: #c5c6c7;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Play", sans-serif;
+}
 
 
-#hero {
-    width: 100%;
-    height: 75vh;
-    background-color: white !important;
-    background: url("../img/hero-bg.jpg") no-repeat;
-    background-size: cover;
-    background-position: 75px;
-    padding: 0 15px;
-    z-index:0;
-    position: relative;
-  }
-  #hero::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    top: 0;
-    z-index: -1;
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  color: #345676;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #d43076;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+
+.scrolled-offset {
+  margin-top: 60px;
 }
   
-  #hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: rgb(255, 255, 255);
-    text-shadow:0 0 3px  #FFDD03;
-  }
-  
-  #hero h2 {
-    color: gold;
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: 300;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  #hero .btn-get-started {
-    font-size: 64px;
-    transition: 0.5s;
-    color: #eccb7a;
-    height: 60px;
-  }
-  
-  #hero .btn-get-started:hover {
-    padding-top: 10px;
-    color: #cc9442;
-  }
-  
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #hero h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    #hero h2 {
-      font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 30px;
-    }
-  }
-  
-  /*--------------------------------------------------------------
-  # Sections General
-  --------------------------------------------------------------*/
-  section {
-    padding: 60px 0;
-  }
-  
-  .section-bg {
-    background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
-  }
-  
-  .section-title {
-    padding-bottom: 30px;
-  }
-  
-  .section-title h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    color: #345676;
-  }
-  
-  .section-title h2::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #d43076;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .section-title p {
-    margin-bottom: 0;
-  }
-
-  .header2 {
-    transition: all 0.5s;
-    z-index: 997;
-    transition: all 0.5s;
-    height: 60px;
-    background: #000;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
-  }
-
-  
-  
-  .header2 .logo h1 {
-    font-size: 26px;
-    margin: 0;
-    padding: 6px 0;
-    line-height: 1;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 2px 3px gold;
-  }
-  
-  .header2 .logo h1 a {
-    color: #ffffff;
-    text-decoration: none;
-    text-shadow: 0 0 7px ;
-  }
-  
-  .header2 .logo img {
-    padding: 0;
-    margin: 0;
-    max-height: 40px;
-  }
-  
-  .scrolled-offset {
-    margin-top: 60px;
-  }
 
 
 
 .card {
     border-radius: 20px;
-    background: #eeeeee;
+    background:  #0b0c10;
     /*box-shadow: 10px 10px 30px #575757, -10px -10px 30px #3d3d3d;*/
     border: none;
     position:relative;       
@@ -230,8 +120,8 @@ body {
 .card img {
 
     border-radius: 50%;
-    background: linear-gradient(145deg, #d6d6d6, #ffffff);
-    box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff
+    background: linear-gradient(145deg,  #0b0c10,  #0b0c10);
+    
 }
 
 .neo-button {
@@ -239,28 +129,28 @@ body {
     height: 40px;
     outline: 0 !important;
     cursor: pointer;
-    color: #fff;
+    color:  #0b0c10;
     font-size: 15px;
     border: none;
     margin-right: 10px;
     border-radius: 50%;
     background: linear-gradient(145deg, #d6d6d6, #ffffff);
-    box-shadow: 20px 20px 60px #cacaca, -20px -20px 60px #ffffff
+    
 }
 
 .neo-button:active {
     border-radius: 50%;
     background: linear-gradient(145deg, #d6d6d6, #ffffff);
-    box-shadow: inset 20px 20px 60px #cacaca, inset -20px -20px 60px #ffffff
+    box-shadow: inset 20px 20px 60px #66fcf1, inset -20px -20px 60px #ffffff
 }
 
 
 
 .fa-linkedin {
-    color: #0077b5
+    color: #0b0c10;
 }
 
 
 .fa-envelope{
-    color:#ff1493
+    color:#0b0c10;
 }

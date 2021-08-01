@@ -29,8 +29,9 @@ session_start();
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a74d0f3882.js" crossorigin="anonymous"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"   ></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src = "assets/js/login.js"></script>
+  
   <link href="assets/css/create-new-password.css" rel="stylesheet">
   <link href="assets/css/common-styles.css" rel="stylesheet">
 
@@ -100,13 +101,30 @@ session_start();
   </head>
 
 <body>
+<header>
+<a href="index.php"><button  class="closebtn" title="Home" style="width:auto;"><i class="fas fa-times"></i></button></a>
+<div  id="header2" class="d-flex align-items-center header2 ">
+    <div class="container d-flex align-items-center justify-content-center">
+
+      <div class="logo">
+        <h1>SRiSHTi 2k21</h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+    </div>
+    
+</div>
+
+</header>
 
     <div class="cotainer-fluid" >
 
-    <a href="index.php"><button  class="closebtn" title="closebtn" style="width:auto;"><i class="fas fa-reply"></i></button></a>
-
+    
+    <div class="mainDiv">
+    <div class="cardStyle">
         <section class="section-default" >
-          <div id="add_err5"></div>  
+          <div id="add_err5"></div> 
+
            <?php  
           $selector = $_GET["selector"];
             $validator = $_GET["validator"];
@@ -116,13 +134,20 @@ session_start();
             } else {
             if(ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false) {
               ?>  
-
+                <h2 class="formTitle">Change Password</h2>
+      
                 <form>
                   <input id="selector" type="hidden" value="<?php echo $selector ?>">
                   <input id="validator" type="hidden" value="<?php echo $validator ?>">
-                  <input id="password" type="password" placeholder="Enter a new password..." >
-                  <input id="rpassword" type="password" placeholder="Repeat new password" >
-                  <button  id="change" type="submit">Submit</button>
+                  <div class="input-group password">
+                    <input id="password" type="password" placeholder="Enter a New Password">
+                  </div>
+                  <div class="input-group password">
+                    <input id="rpassword" type="password" placeholder="Confirm Password">
+                  </div>
+                  <div class="buttonWrapper">
+                    <button type="submit" id="change" class="submitButton pure-button pure-button-primary">Submit</button>
+                  </div>
 
                 </form>
 <?php
@@ -133,9 +158,12 @@ session_start();
             ?>
                 
 
-        </section>  
+        </section> 
+        </div>
+      </div> 
+      <div id="particles-js"></div>
     </div>
-
+    
 </body>
 
 </html>

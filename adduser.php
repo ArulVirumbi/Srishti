@@ -1,78 +1,115 @@
-<?php
+<?php 
+@ob_start();
 session_start();
 
-//Open a new connection to the MySQL server
-$mysqli = new mysqli('localhost', 'root', 'arulvirumbi', 'srishti');
+$uploadDir = 'dXBsb2Fkc2ZvbGRlcg/'; 
+$response = array( 
+    'status' => 0, 
+    'message' => 'Form submission failed, please try again.' 
+); 
+ 
+// If form is submitted 
+if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['file'])){ 
+    // Get the submitted form data 
+    $name = $_POST['name']; 
+    $email = $_POST['email']; 
+    $mobile = $_POST['mobile'];
+    $department = $_POST['department']; 
+    $cgname = $_POST['cgname'];
+    $password = $_POST['password']; 
+     
+    // Check whether submitted data is not empty 
+    if(!empty($name) && !empty($email)){ 
 
-//Output any connection error
-if ($mysqli->connect_error) {
-    die('Error : (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-}
+        if (strlen($name) < 4) {
+            $response['message'] = 'Full name is required.';
+        } elseif (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            $response['message'] = 'Please enter a valid email.';
+        } elseif (strlen($mobile) != 10) {
+            $response['message'] = 'Mobile Number must be 10 digits.';
+        } elseif (strlen($department) <= 2) {
+            $response['message'] = 'Enter Your department name.';
+        } elseif (strlen($cgname) <= 4) {
+            $response['message'] = 'Enter your college name.';
+        } elseif (strlen($password) <= 4) {
+            $response['message'] = 'Password must be at least 4 characters.';    
+        
+            //VALIDATION
+           
+        }else{ 
+            $uploadStatus = 1; 
+             
+            // Upload file 
+            $uploadedFile = ''; 
+            if(!empty($_FILES["file"]["name"])){ 
+                 
+                // File path config 
+                $fileName = basename($_FILES["file"]["name"]); 
+                $targetFilePath = $uploadDir . $fileName;
+                $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+                 
+                $newfileName = $name."_".$department.".".$fileType;
+                $newtargetFilePath = $uploadDir . $newfileName;
 
-$fname = mysqli_real_escape_string($mysqli, test_input($_POST['fname']));
-//$lname = mysqli_real_escape_string($mysqli, $_POST['lname']);
-$email = mysqli_real_escape_string($mysqli, test_input($_POST['email']));
-$mobile = mysqli_real_escape_string($mysqli, test_input($_POST['mobile']));
-$password = mysqli_real_escape_string($mysqli, $_POST['password']);
 
-//VALIDATION
-function test_input($data) {
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	return $data;
-  }
+                // Allow certain file formats 
+                $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg'); 
+                if(in_array($fileType, $allowTypes)){ 
+                    // Upload file to the server 
+                    if(move_uploaded_file($_FILES["file"]["tmp_name"], $newtargetFilePath)){ 
+                        $uploadedFile = $newfileName; 
 
-if (strlen($fname) < 4) {
-    echo 'fname';
-}
-/* elseif (strlen($lname) < 2) {
-    echo 'lname';
-}*/ 
-elseif (strlen($email) <= 4) {
-    echo 'eshort';
-} elseif (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-    echo 'eformat';
-} elseif (strlen($mobile) != 10) {
-	echo 'nshort';
-} elseif (strlen($password) <= 4) {
-    echo 'pshort';
-	
-//VALIDATION
-	
-} else {
-	
-	//PASSWORD ENCRYPT
-	$spassword = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
-	
-	$query = "SELECT * FROM members WHERE email='$email'";
-	$result = mysqli_query($mysqli, $query) or die(mysqli_error());
-	$num_row = mysqli_num_rows($result);
-	$row = mysqli_fetch_array($result);
-	
-		if ($num_row < 1) {
+                    }else{ 
+                        $uploadStatus = 0; 
+                        $response['message'] = 'Sorry, there was an error uploading your file.'; 
+                    } 
+                }else{ 
+                    $uploadStatus = 0; 
+                    $response['message'] = 'Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.'; 
+                } 
+            }else {
+                $uploadStatus = 0; 
+                $response['message'] = 'Please submit your college id.';
+            }
+             
+            if($uploadStatus == 1){ 
+                // Include the database config file 
+                include_once 'includes/dbh.inc.php'; 
+                
 
-			$insert_row = $mysqli->query("INSERT INTO members (fname, email, mobile, password) VALUES ('$fname', '$email', '$mobile', '$spassword')");
+                $query = "SELECT * FROM members WHERE email='$email'";
+	            $result = mysqli_query($conn, $query) or die(mysqli_error());
+	            $num_row = mysqli_num_rows($result);
 
-			if ($insert_row) {
+                if ($num_row < 1) {
+                $spassword = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
+                // Insert form data in the database 
+                $insert = $conn->query("INSERT INTO members (fname,email,mobile,department,cgname,file,password,events,workshops,paperpres,flagship) VALUES ('$name','$email','$mobile','$department','$cgname','$uploadedFile','$spassword',' ',' ',' ',' ')"); 
+                
+                
+                $insert_ev = $conn->query("INSERT INTO events (email) VALUE ('$email')");
+			    $insert_ws = $conn->query("INSERT INTO workshops (email) VALUE ('$email')");
+                 
+                    if($insert){ 
 
-				$_SESSION['login'] = $mysqli->insert_id;
-				$_SESSION['fname'] = $fname;
-				$_SESSION['email'] = $email;
-				$_SESSION['mobile'] = $mobile;
-				//$_SESSION['lname'] = $lname;
+                        $_SESSION['login'] = $conn->insert_id;
+				        $_SESSION['fname'] = $name;
+				        $_SESSION['email'] = $email;
 
-				echo 'true';
-
-			}
-
-		} else {
-
-			echo 'false';
-
-		}
-		
-		
-}
-
-?>
+                        $response['status'] = 1; 
+                        $response['message'] = 'Form data submitted successfully!'; 
+                    } else {
+                        $response['message'] = 'Error inserting data.';
+                    }
+                }else {
+                    $response['message'] = 'Email already in system.';
+                }
+            } 
+        } 
+    }else{ 
+         $response['message'] = 'Please fill all the mandatory fields (name and email).'; 
+    } 
+} 
+ 
+// Return response 
+echo json_encode($response);

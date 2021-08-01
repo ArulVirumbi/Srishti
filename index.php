@@ -31,20 +31,19 @@ session_start();
 
   <!-- Template Main CSS File -->
   <link href="assets/css/navbar.css" rel="stylesheet">
-  <link href="assets/css/home.css" rel="stylesheet">
+  <link href="assets/css/common-styles.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: TheEvent - v4.2.0
-  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #d8a31c"></i>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #66fcf1"></i>
 
   <header id="header" class="d-flex flex-column justify-content-center">
 
@@ -52,35 +51,26 @@ session_start();
       <ul>
         <?php require_once 'user.php'; ?>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-home"></i> <span>Home</span></a></li>
-        <li><a href="events.php" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
-        <li><a href="workshop.php" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
-        <li><a href="about.php" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
-        <li><a href="team.php" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
-        <li><a href="contact.php" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+        <li><a href="EVENTS" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
+        <li><a href="WORKSHOPS" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
+        <li><a href="ABOUT" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+        <li><a href="TEAM" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
+      <li><a href="FAQ" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ</span></a></li>
+        <li><a href="CONTACT" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
   </header>
 
-  <!-- <a href="login.php" ><button  style="width:auto;">&ensp;<i class="fa fa-sign-in"></i><span>&ensp;</span></button></a> -->
-
-
-
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="assets/js/workshops.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>

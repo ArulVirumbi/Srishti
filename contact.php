@@ -35,7 +35,7 @@ session_start();
   <link href="assets/css/common-styles.css" rel="stylesheet">
 
 
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"   ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	
 	<script type="text/javascript">
         $(document).ready(function () {
@@ -53,37 +53,37 @@ session_start();
                     success: function (html) {
                         if (html == 'true') {
 
-                            $("#add_err2").html('<div class="alert alert-success"> \
+                            $("#add_err7").html('<div class="alert alert-success"> \
                                                  <strong>Message Sent!</strong> \ \
                                                  </div>');
 
                         } else if (html == 'fname_long') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>First Name</strong> must cannot exceed 50 characters. \ \
                                                  </div>');
 						
 						} else if (html == 'fname_short') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>First Name</strong> must exceed 2 characters. \ \
                                                  </div>');
 												 
 						} else if (html == 'email_long') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>Email</strong> must cannot exceed 50 characters. \ \
                                                  </div>');
 						
 						} else if (html == 'email_short') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>Email</strong> must exceed 2 characters. \ \
                                                  </div>');
 												 
 						} else if (html == 'eformat') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>Email</strong> format incorrect. \ \
                                                  </div>');
 												 
 						} else if (html == 'message_long') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                            $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>Message</strong> must cannot exceed 50 characters. \ \
                                                  </div>');
 						
@@ -94,13 +94,14 @@ session_start();
 
 
                         } else {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
+                           /* $("#add_err7").html('<div class="alert alert-danger"> \
                                                  <strong>Error</strong> processing request. Please try again. \ \
-                                                 </div>');
+                                                 </div>');*/
+                              $("#add_err7").html(html);
                         }
                     },
                     beforeSend: function () {
-                        $("#add_err2").html("loading...");
+                        $("#add_err7").html("loading...");
                     }
                 });
                 return false;
@@ -121,22 +122,18 @@ session_start();
 
     <?php require_once 'user.php'; ?>
       
-      <li><a href="index.php" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
-      <li><a href="events.php" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
-      <li><a href="workshop.php" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
-      <li><a href="about.php" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
-      <li><a href="team.php" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
+      <li><a href="HOME" class="nav-link scrollto"><i class="fas fa-home"></i> <span>Home</span></a></li>
+      <li><a href="EVENTS" class="nav-link scrollto"><i class="fas fa-calendar-day"></i> <span>Events</span></a></li>
+      <li><a href="WORKSHOPS" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
+      <li><a href="ABOUT" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+      <li><a href="TEAM" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
+      <li><a href="FAQ" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ</span></a></li>
       <li><a href="#" class="nav-link scrollto active"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
     </ul>
   </nav><!-- .nav-menu -->
 
 </header>
-
-<section id="hero" class="d-flex flex-column align-items-center justify-content-center">
-    <h1>SRiSHTi  2k21</h1>
-    <h2>IEEE STUDENTS CHAPTER 12951</h2>
-    <a href="#header2" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
-  </section>
+<?php require_once 'header.php';?>
 
   <div  id="header2" class="d-flex align-items-center header2 ">
     <div class="container d-flex align-items-center justify-content-center">
@@ -148,7 +145,7 @@ session_start();
       </div>
     </div>
   </div>
-
+  <div class="container-fluid">
   <section id="contact" class="contact section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -190,7 +187,7 @@ session_start();
           </div>
 
           <div class="col-lg-6">
-          <div id="add_err2"></div>
+          <div id="add_err7"></div>
             <form action="forms/contact.php" method="post" role="form" class="php-email-form  effect7">
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -219,27 +216,12 @@ session_start();
 
       </div>
     </section>
+            </div>
 
 <?php require_once 'footer.php';?>
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
  
-
-
-  <script>
-    window.onscroll = function() {myFunction()};
-    
-    var header2 = document.getElementById("header2");
-    var sticky2 = header2.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky2) {
-        header2.classList.add("fixed-top");
-      } else {
-        header2.classList.remove("fixed-top");
-      }
-    }
-    </script>
 
 
  <!-- Vendor JS Files -->

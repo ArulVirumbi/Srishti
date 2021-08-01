@@ -1,33 +1,54 @@
-<div class="footer-dark">
-  <footer>
+
+<div class="footer" id="insertFooter">
+    <footer>
       <div class="container">
-          <div class="row">
-              <div class="col-sm-6 col-md-3 item colu1">
-                  <h3><a href="#">Home</a></h3>
-                  <h3><a href="#">Events</a></h3>
-                  <h3><a href="#">Workshops</a></h3>
-              </div>
-              <div class="col-sm-6 col-md-3 item colu2">
-                  <h3><a href="#">About</a></h3>
-                  <h3><a href="#">Team</a></h3>
-                  <h3><a href="#">Schedule</a></h3>
-              </div>
-              <div class="col-md-6 item text">
-                  <img class="psg" src="assets/img/psg logo.png" alt="">
-                  <p>
-                      IEEE STUDENTS CHAPTER 12951
-                      <BR><b>PSG COLLEGE OF TECHNOLOGY</b><br>
-                  </p>
-              </div>
-              <div class="col item social">
-                  <a href="#" target="_blank" style="background-color: #1877f2;"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" target="_blank" style="background-color: #25d366;"><i class="fab fa-whatsapp"></i></a>
-                  <a href="#" target="_blank" style="background-color: #ff006a;"><i class="fab fa-instagram"></i></a>
-                  <a href="#" target="_blank" style="background-color: #ff0000;"><i class="fab fa-youtube"></i></a>
-                  <a href="#" target="_blank" style="background-color: #009c9c;"><i class="far fa-envelope"></i></a>
+          <div class="footer__option">
+              <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="footer__option__item">
+                          <h5 style="padding-left:0px">About SRiSHTi</h5>
+                          <p>The Students’ Chapter of IEEE at PSG College of Technology was initiated in 1974. It was started to increase 
+                              the participation of students in research and encourage new ideas in the
+                               respective fields.</p>
+                          <a href="./about.html" class="read__more">Read more <span class="arrow_right"></span></a>
+                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-3">
+                      <div class="footer__option__item">
+                          <h5>Navigate to</h5>
+                          <ul>
+                              <li><a href="HOME">Home</a></li>
+                              <li><a href="TEAM">Team</a></li>
+                              <li><a href="FAQ">FAQ</a></li>
+                              <li><a href="CONTACT">Contact us</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-3">
+                      <div class="footer__option__item">
+                          <h5>Events</h5>
+                          <ul>
+                              <li><a href="./events.html#SRiSHTi">SRiSHTi</a></li>
+                              <li><a href="./events.html#Atom">Atom</a></li>
+                              <li><a href="./events.html#Inaugration">Inauguration</a></li>
+                              <li><a href="./events.html#Valedictory">Valedictory</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                      <div class="footer__option__item">
+                        <a href="https://www.srishti.co.in"><img src="assets/img/IEEE.png"alt="SRiSHTi 2021" width="130" height="50"></a>
+                          <a href="https://www.srishti.co.in"><img src="assets/img/hero1.png"alt="SRiSHTi 2021" width="150" height="55"></a><br><br>
+                          <a href="https://www.psgtech.edu/" target="_blank"><h6>PSG College of Technology</h6></a>
+                          <a href="https://goo.gl/maps/x1EitRRC96BLJnMJ8" target="_blank"><p>Address: Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu 641004</p></a>
+                          <div class="footer__top__social">
+                              <a href="https://www.instagram.com/ieee_sc_12951/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+                              <a href="mailto:ieee.studentschapter.12951@gmail.com" taget="_blank"><i class="fa fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/company/ieee-students-chapter-12951/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
-          <p class="copyright">Copyrights © 2022 - All Rights Reserved</p>
-      </div>
-  </footer>
+    </footer>
 </div>

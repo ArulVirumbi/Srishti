@@ -1,4 +1,6 @@
 .gitignore # Ignore the hand that feeds!
 
 sendmsg.php
-
+assets/css old/
+includes/conn.php
+old files/

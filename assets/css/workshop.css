@@ -3,7 +3,6 @@
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
     color: #272829;
     background: linear-gradient(-45deg, #C5C6C7, #1F2833, #45A29E, #23d5ab);
     /*background: linear-gradient(-45deg, #ee7752, #f34d8d, #23a6d5, #23d5ab);*/
@@ -41,9 +40,7 @@ body {
     text-decoration: none;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", sans-serif;
-  }
+ 
   
   .submitBtn{
     height: 48px;

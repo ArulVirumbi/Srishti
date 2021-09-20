@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   color: white;
   background: #1f2833;
   background-size: 300% 300%;
@@ -16,19 +13,9 @@ body {
 }
 
 
-a {
-  color: #66fcf1;
-  text-decoration: none;
-}
 
-a:hover {
-  color: #c5c6c7;
-  text-decoration: none;
-}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Play", sans-serif;
-}
+
 
 
 /*--------------------------------------------------------------

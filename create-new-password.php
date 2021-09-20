@@ -17,10 +17,13 @@ session_start();
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
    <!-- Vendor CSS Files -->
    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -53,38 +56,31 @@ session_start();
 						  if(html=='true')
 						  {
 							  
-							  $("#add_err5").html('<div class="alert alert-success"> \
-													<strong>Password Reset.</strong> \ \
-												</div>');
+                alert("Password Reset.");
+							  
 
 							window.location.href = "login.php?newpwd=passwordupdated";
 						  
 						  } else if (html=='pass') {
-                $("#add_err5").html('<div class="alert alert-danger"> \
-                                        <strong>Password</strong> must be at least 4 characters . \ \
-                                          </div>');
+                alert("Password must be at least 4 characters .");
+                
 								
 						  
 						  } else if (html == 'false') {
-                $("#add_err5").html('<div class="alert alert-danger"> \
-                                      <strong>Password did not match!</strong> \ \
-                                        </div>');                    
+                alert("Password did not match!");
+                                   
 
               } else if (html == 'resubmit') {
-                $("#add_err5").html('<div class="alert alert-danger"> \
-                                      <strong>Please resubmit your request.</strong> \ \
-                                        </div>');                    
+                alert("Please resubmit your request.");
+                                  
 
               } else if (html == 'link') {
-                $("#add_err5").html('<div class="alert alert-danger"> \
-                                      <strong>Link Invalid.</strong> Please try again. \ \
-                                        </div>');   
-                                        window.location.href = "../login.php";                 
+                alert("Link Invalid. Please try again.");
+                    window.location.href = "../login.php";                 
 
               } else {
-								  $("#add_err5").html('<div class="alert alert-danger"> \
-													<strong>Error</strong> processing request. Please try again. \ \
-												</div>');
+                alert("Error processing request. Please try again.");
+								  
                         
 						  }
 						},

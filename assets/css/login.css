@@ -62,7 +62,6 @@ body {
   position: absolute;
   z-index: 1;
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-size: 27.2px;
   font-size: 1.7rem;
   font-weight: 300;
@@ -77,7 +76,6 @@ body {
 
 
 .card {
-  font-family: "Open Sans", sans-serif;
   background: #1F2833;
   position: absolute;
   -webkit-transition: 0.3s ease all;
@@ -91,7 +89,7 @@ body {
 }
 .card-body p {
   color: #f7f7f7; 
-  font-size: 17px;
+  font-size: 20px;
   text-shadow:0 0 3px #6aeeff;
 }
 .card-body .itext {
@@ -455,4 +453,38 @@ input[type="checkbox"]:checked + #toglabel:before {
 }
 .upload:focus::-webkit-file-upload-button {
   color: gray;
+}
+
+
+@media (max-width: 576px) {
+  #toglabel{
+      left: 39%;
+      top: 15%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  #toglabel{
+      left: 41%;
+      top: 15%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #toglabel{
+      left: 45%;
+      top: 16%;
+  }
+}
+
+@media (max-height: 690px) {
+  #toglabel{
+      top: 13%;
+  }
+}
+
+@media (max-height: 530px) {
+  #toglabel{
+      top: 7%;
+  }
 }

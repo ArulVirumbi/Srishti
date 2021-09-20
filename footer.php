@@ -19,8 +19,8 @@
                           <ul>
                               <li><a href="HOME">Home</a></li>
                               <li><a href="TEAM">Team</a></li>
-                              <li><a href="FAQ">FAQ</a></li>
-                              <li><a href="CONTACT">Contact us</a></li>
+                              <li><a href="FAQ-CONTACT">FAQ</a></li>
+                              <li><a href="FAQ-CONTACT">Contact us</a></li>
                           </ul>
                       </div>
                   </div>
@@ -38,7 +38,6 @@
                   <div class="col-lg-4 col-md-12">
                       <div class="footer__option__item">
                         <a href="https://www.srishti.co.in"><img src="assets/img/IEEE.png"alt="SRiSHTi 2021" width="130" height="50"></a>
-                          <a href="https://www.srishti.co.in"><img src="assets/img/hero1.png"alt="SRiSHTi 2021" width="150" height="55"></a><br><br>
                           <a href="https://www.psgtech.edu/" target="_blank"><h6>PSG College of Technology</h6></a>
                           <a href="https://goo.gl/maps/x1EitRRC96BLJnMJ8" target="_blank"><p>Address: Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu 641004</p></a>
                           <div class="footer__top__social">

@@ -42,10 +42,13 @@ if ($num_row >= 1) {
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
    <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -93,8 +96,7 @@ if ($num_row >= 1) {
                       <h4><?php echo $_SESSION['fname']; ?></h4>
                      
                       <p class="text-muted font-size-sm"><?php echo $_SESSION['department']; ?></p></br>
-                      <a href = "logout.php" class="logoutbtn"><button class="btn btn-primary"><b>Logout</b></button></a>
-                      <button class="btn btn-outline-danger"><b>Delete Account</b></button>
+                      <a href = "logout.php" class="logoutbtn"><button class="logoutBtn"><b>Logout</b></button></a>
                     </div>
                   </div>
                 </div>

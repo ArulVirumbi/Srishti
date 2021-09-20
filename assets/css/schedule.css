@@ -1,0 +1,398 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color:#1f2833 !important;
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container-fluid{
+  padding: 0px !important;
+}
+.btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #66fcf1;
+    background:black;
+    border: 2px groove #66fcf1;
+    border-radius: 10px;
+    /* border-color: #66fcf1; */
+    box-shadow: inset 0 0 0 50p #66fcf1;
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    margin-bottom: 0px;
+}
+
+.btn:hover {
+    color:#0b0c10;
+    background: #66fcf1;
+    box-shadow: inset 0 0 0 0 #66fcf1;
+    border-color:#66fcf1;
+}
+
+.submitBtn{
+  height: 48px;
+  width:150px;
+  border-radius: 24px;
+    outline: none;
+    background: none;
+    display: block;
+    margin: 0px 20px 20px 20px;
+    text-align: center;
+  border-color: #45A29E;
+  color: rgb(0, 0, 0);
+  background-color: #66FCF1;
+ /*background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);*/
+  transition: all 150ms ease-in-out;
+
+}
+.submitBtn:hover {
+  background: 	#303030;
+  box-shadow: 0 0 10px 0 #45A29E inset, 0 0 10px 4px #66FCF1;
+  color: rgb(255, 255, 255);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}  
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Play", sans-serif;
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Sections General
+  --------------------------------------------------------------*/
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    color: #66fcf1;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #d43076;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+  
+  .scrolled-offset {
+    margin-top: 60px;
+  }
+
+  #sliding-bar {
+    position: absolute;
+    height: 4px;
+    width: 100% ;
+    background: #66fcf1;
+    bottom: 0px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+
+.category-bar {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 55px;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.category-bar nav{
+    display: flex;
+    justify-content: center;
+}
+
+.bullet ul {
+    list-style-type: disc !important;
+    text-align: left;
+}
+
+.category-bar a {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    align-items: center;
+    justify-content: center;
+}
+.category-bar a:hover{
+    transform: scale(1.2);
+}
+
+
+.category-bar nav a {
+    text-decoration: none;
+    color: white;
+    font-family: "Play", sans-serif;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    transition: 0.5s;
+    margin: 0 20px;
+}
+
+.category-bar nav a:hover {
+    color: #66fcf1;
+    transition: 0.5s;
+}
+
+.experience {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.experience h1{
+    color: #66fcf1;
+}
+
+.experience .timeline {
+    position: relative;
+    width: 100%;
+}
+
+.experience .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #66fcf1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.experience .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.experience .timeline .timeline-item.left {
+    left: 10%;
+    padding-right: 30px;
+}
+
+.experience .timeline .timeline-item.right {
+    left: 50%;
+    padding-left: 30px;
+}
+
+.experience .timeline .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #1f2833;
+    border: 2px solid #66fcf1;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.right::after {
+    left: -8px;
+}
+
+.experience .timeline .timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 46px;
+  right: 10px;
+  z-index: 1;
+  border: 10px solid;
+  border-color: transparent transparent transparent black;
+}
+
+.experience .timeline .timeline-item.right::before {
+  left: 10px;
+  border-color: transparent #0b0c10 transparent transparent;
+}
+
+.experience .timeline .timeline-date {
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #66fcf1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.left .timeline-date {
+    text-align: left;
+    left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-date {
+    text-align: right;
+    right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-text {
+    padding: 20px;
+    background: black;
+    position: relative;
+    border-right: 5px solid #66fcf1;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+}
+
+.experience .timeline .timeline-item.right .timeline-text {
+    border-right: none;
+    border-left: 5px solid #66fcf1;
+}
+
+.experience .timeline .timeline-text h2 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.experience .timeline .timeline-text h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.experience .timeline .timeline-text p {
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+    color:#66fcf1;
+}
+@media (max-width: 992px) {
+    .experience .timeline .timeline-item {
+        width: 50%;
+    }
+    .experience .timeline .timeline-item.left {
+        left: 0;
+    }
+    .experience .timeline .timeline-text h2 {
+        font-size: 16px;
+    }
+    .experience .timeline .timeline-text p {
+        font-size: 14px;
+    }
+    .btn {
+        padding: 3px 6px;
+    }
+}
+@media (max-width: 767.98px) {
+    .experience .timeline::after {
+        left: 8px;
+    }
+
+    .experience .timeline .timeline-item {
+        width: 95%;
+        padding-left: 38px;
+    }
+    
+    .experience .timeline .timeline-item.left {
+        padding-right: 0;
+    }
+    
+    .experience .timeline .timeline-item.right {
+        left: 0%;
+        padding-left: 38px;
+    }
+
+    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.right::after {
+        left: 0;
+    }
+    
+    .experience .timeline .timeline-item.left::before,
+    .experience .timeline .timeline-item.right::before {
+        left: 18px;
+        border-color: transparent #0b0c10 transparent transparent;
+    }
+    
+    .experience .timeline .timeline-item.left .timeline-date,
+    .experience .timeline .timeline-item.right .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    
+    .experience .timeline .timeline-item.left .timeline-text,
+    .experience .timeline .timeline-item.right .timeline-text {
+        border-right: none;
+        border-left: 5px solid #66fcf1;
+    }
+    .experience h1{
+        font-size: 35px;
+    }
+    .experience .timeline .timeline-date {
+        font-size: 21px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:'icon details''icon btn';
+    grid-gap: 10px;
+  }
+  
+.item-1 {
+    grid-area: icon;
+    margin: auto;
+  }
+
+.item-2 {
+    grid-area: details;
+}
+.item-3 {
+    grid-area: btn;
+}

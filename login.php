@@ -15,10 +15,23 @@ if(!isset($_SESSION['email'])){
     
     
     <title>login page</title>
+    
+    <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <script src = "assets/js/login.js"></script>
+    <script src = "assets/js/login.js"></script>
+    
     <link rel="stylesheet" href="assets/css/login.css">
-  <link href="assets/css/common-styles.css" rel="stylesheet">
+    <link href="assets/css/common-styles.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
 
     <script src="https://kit.fontawesome.com/a74d0f3882.js" crossorigin="anonymous"></script>
 
@@ -176,8 +189,8 @@ if(!isset($_SESSION['email'])){
   <body>
     <button  class="closebtn" title="closebtn" style="width:auto;" onclick = "history.back()"><i class="fas fa-reply"></i></button>
    
-    <div>
-	<input type="checkbox" id="toggle"/>
+    <div class="d-flex justify-content-center">
+	<input class="hidden-input" type="checkbox" id="toggle"/>
 	<label id="toglabel" for="toggle"></label>
 </div>
     <div class="form-collection">

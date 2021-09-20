@@ -6,8 +6,18 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
-
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Play", sans-serif;
+  }
 /*--------------------------------------------------------------
   # Header 2
   --------------------------------------------------------------*/
@@ -55,12 +65,7 @@ body {
     line-height: 56px;
     color: rgb(255, 255, 255);
     letter-spacing: 3px;
-    font-family: 'GILC____';
     font-style: bold;
-  }@font-face {
-    font-family: 'GILC____';
-    font-style: normal;
-    src: url("../fonts/GILC____.TTF");
   }
   
   
@@ -90,57 +95,6 @@ body {
     margin: auto;
   }
   
-/*
-  #hero {
-    width: 100%;
-    height: 75vh;
-    background-color: white !important;
-    background: url("../img/hero-bg.jpg") no-repeat;
-    background-size: cover;
-    background-position: 75px;
-    padding: 0 15px;
-    z-index:0;
-    position: relative;
-  }
-  #hero::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    top: 0;
-    z-index: -1;
-}
-  
-  #hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: rgb(255, 255, 255);
-    text-shadow:0 0 3px  #FFDD03;
-  }
-  
-  #hero h2 {
-    color: gold;
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-weight: 300;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  #hero .btn-get-started {
-    font-size: 64px;
-    transition: 0.5s;
-    color: #eccb7a;
-    height: 60px;
-  }
-  
-  #hero .btn-get-started:hover {
-    padding-top: 10px;
-    color: #cc9442;
-  }*/
   
   @media (min-width: 1024px) {
     #hero {
@@ -407,4 +361,8 @@ body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #66fcf1;
+  }
+
+  .fa-hourglass-half {
+      margin-left: 2px !important;
   }

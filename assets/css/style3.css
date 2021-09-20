@@ -1,0 +1,859 @@
+
+html { font-size: 70%; }
+
+body {
+  box-sizing: border-box;
+  background: #1f2833;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  color: #272829;
+}
+
+.container-fluid{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#sliding-bar {
+  position: absolute;
+  height: 4px;
+  width: 100% ;
+  background: #66fcf1;
+  bottom: 0px;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+/* footer =======================*/
+.footer__option__item h5 {
+  font-size: 20px;
+}
+.footer__option__item p {
+  font-size: 16px;
+}
+.footer__option__item h6 {
+  font-size: 20px;
+}
+.footer__option__item ul {
+  padding-left: 20%;
+}
+/* Headings */
+.head-refn {
+  font-weight: 500 !important;
+  font-size: 26px !important;
+}
+/* Main heading for card's front cover */
+.card-front__heading {
+  font-size: 1.5rem;
+  margin-top: .25rem;
+}
+
+/* Main heading for inside page */
+.inside-page__heading { 
+  padding-bottom: 0.5rem; 
+  width: 100%;
+}
+
+/* Mixed */
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+.inside-page__heading,
+.card-front__text-view {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: .2rem;
+}
+
+.inside-page__heading-1,
+.card-front__text-view-1 { color: #0b0c10; }
+
+.inside-page__heading-2,
+.card-front__text-view-2 { color: #66fcf1; }
+
+
+
+/* For pricing text on card front cover */
+.card-front__text-price {
+  font-size: 1.2rem;
+  margin-top: -.2rem;
+}
+
+/* Back cover */
+
+/* For inside page's body text */
+.inside-page__text-1 {
+  color: #333;
+}
+.inside-page__text-2 {
+  color: #fff;
+}
+
+/* Icons ===========================================*/
+
+.card-front__icon {
+  fill: #fafbfa;
+  font-size: 3vw;
+  height: 3.25rem;
+  margin-top: -.5rem;
+  width: 3.25rem;
+}
+
+/* Buttons =================================================*/
+
+.inside-page__btn {
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: auto;
+  overflow: hidden;
+  padding: .65rem .75rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .3s ease;
+  width: 90%;
+  z-index: 10;
+}
+
+.inside-page__btn::before { 
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: all .3s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.inside-page__btn-1 { 
+  border-color: #0b0c10;
+  color: #0b0c10 !important;
+}
+
+.inside-page__btn-1::before { 
+  background-color: #0b0c10;
+}
+
+.inside-page__btn-2 { 
+  border-color: #66fcf1;
+  color: #66fcf1 !important;
+}
+
+.inside-page__btn-2::before { 
+  background-color: #66fcf1;
+}
+
+/* .inside-page__btn--beach { 
+  border-color: #fa7f67;
+  color: #fa7f67;
+}
+
+.inside-page__btn--beach::before { 
+  background-color: #fa7f67;
+}
+
+.inside-page__btn--camping { 
+  border-color: #00b97d;
+  color: #00b97d;
+}
+
+.inside-page__btn--camping::before { 
+  background-color: #00b97d;
+} */
+
+.inside-page__btn-1:hover { 
+  color: #66fcf1 !important;
+}
+
+.inside-page__btn-2:hover {
+  color: #0b0c10 !important;
+}
+
+.inside-page__btn:hover::before { 
+  transform: scaleY(1);
+}
+
+/* Layout Structure=========================================*/
+
+.main {
+  background: linear-gradient(
+    to bottom right,
+    #eee8dd,
+    #e3d9c6
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Container to hold all cards in one place */
+.card-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+  margin-bottom:80px;
+}
+
+/* Card ============================================*/
+
+/* Area to hold an individual card */
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+/* A container to hold the flip card and the inside page */
+.card {
+  background-color: rgba(0,0,0, .05);
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+  height: 17.5rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 17.5rem;
+}
+
+/* Flip card - covering both the front and inside front page */
+
+/* An outer container to hold the flip card. This excludes the inside page */
+.flip-card {
+  height: 17.5rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 17.5rem;
+  z-index: 100;
+}
+
+/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+/* This is done so content in the inside page can be selected */
+.flip-card > * {
+  visibility: visible;
+}
+
+/* An inner container to hold the flip card. This excludes the inside page */
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Styling for the front side of the flip card */
+
+/* container for the front side */
+.card-front-1 {
+  background-color: #66fcf1;
+  height: 17.5rem;
+  width: 17.5rem;
+}
+.card-front-2 {
+  background-color: #0b0c10;
+  height: 17.5rem;
+  width: 17.5rem;
+}
+
+/* Front side's top section */
+.card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 14rem;
+  justify-content: center;
+  padding: .75rem;
+}
+
+.card-front__tp-1 {
+  background: #0b0c10;
+  color: #66fcf1;
+}
+
+.card-front__tp-2 {
+  background: #66fcf1;
+  color: #0b0c10;
+}
+
+/* .card-front__tp--beach {
+  background: linear-gradient(
+    to bottom,
+    #fb9b88,
+    #f86647
+  );
+}
+
+.card-front__tp--camping {
+  background: linear-gradient(
+    to bottom,
+    #00db93,
+    #00b97d
+  );
+} */
+
+/* Front card's bottom section */
+.card-front__bt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the back side of the flip card */
+
+.card-back-1 {
+  background-color: #66fcf1;
+  transform: rotateY(180deg);
+}
+.card-back-2 {
+  background-color: #0b0c10;
+  transform: rotateY(180deg);
+}
+
+
+/* Specifically targeting the <video> element */
+.video__container-1 {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background: #0b0c10;
+}
+.video__container-1 h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #66fcf1;
+  margin-top: 1.25rem;
+  overflow: auto;
+}
+.video__container-2 {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background: #66fcf1;
+}
+.video__container-2 h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0b0c10;
+  margin-top: 1.25rem;
+  overflow: auto;
+}
+/* Inside page */
+
+.inside-page-1 {
+  background-color: #66fcf1;
+  /* box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25); */
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 17.5rem;
+  z-index: 1;
+}
+.inside-page-2 {
+  background-color: #0b0c10;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 17.5rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center; 
+  width: 100%;
+}
+
+/* Functionality ====================================*/
+
+/* This is to keep the card centered (within its container) when opened */
+.card:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 35rem;
+}
+
+/* When the card is hovered, the flip card container will rotate */
+.card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+/* When the card is hovered, the shadow on the inside page will shrink to the left */
+.card:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+}
+
+/* Footer ====================================*/
+
+.footer {
+  background-color: #333;
+   margin-top: 3rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.hide-1 {
+  display: none;
+}
+.hide-2 {
+  display: unset;
+}
+@media (max-width: 991px) {
+  .hide-1 {
+    display: unset;
+  }
+  .hide-2 {
+    display: none;
+  }
+}
+@media (max-width: 572px) {
+  .hide {
+    display: unset;
+  }
+  .hide-2 {
+    display: unset;
+  }
+  .inside-page__heading {
+    display: none;
+  }
+}
+.category-bar {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  z-index: 150;
+}
+
+.category-bar nav{
+  display: flex;
+  justify-content: center;
+  left: 20%
+}
+
+.bullet ul {
+  list-style-type: disc !important;
+  text-align: left;
+}
+
+.category-bar a {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  align-items: center;
+  justify-content: center;
+}
+.category-bar a:hover{
+  transform: scale(1.2);
+}
+
+
+.category-bar nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Play", sans-serif;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  transition: 0.5s;
+  margin: 0 20px;
+}
+
+.category-bar nav a:hover {
+  color: #66fcf1;
+  transition: 0.5s;
+}
+
+.category h2 {
+  color: #66fcf1;
+  text-align: center;
+  font-family: "Play", sans-serif;
+  font-size: 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+
+
+
+.transition { transition: all .3s ease-out }
+.category .nos{
+padding: 64px 8px 4px 24px;
+  position: relative;
+  width: auto !important;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  display: block;
+  margin: 12px;
+  text-decoration: none;
+  background-color: rgb(37, 37, 37);
+  z-index: 0;
+  overflow:hidden;  
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);  
+}
+
+@media (max-width: 465px) {
+  .category-bar nav a {
+    font-size: 15px;
+    margin: 0 10px;
+    overflow: hidden;
+  }  
+}
+
+@media (max-width: 330px) {
+.category-bar nav a {
+  font-size: 13px;
+  margin: 0 5px;
+  overflow: hidden;
+}  
+}
+
+@media (max-width: 572px) {
+  .inside-page-1,
+  .inside-page-2 {
+    width: 16rem;
+  }
+  .card,
+  .flip-card,
+  .card-front-1,
+  .card-front-2 {
+    height: 16rem;
+    width: 16rem;
+  }
+  .card:hover {
+    width: 32rem;
+  }
+  .card-front__tp {
+    height: 12.8rem;
+  }
+  .video__container-1 h3 {
+    font-size: 20px;
+  }
+  .video__container-2 h3 {
+    font-size: 20px;
+  }
+}
+
+
+/*modal*/
+
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0em;
+  overflow: auto;
+  overflow-x: hidden;
+  border: 25px solid rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  width: 80%;
+  border-radius: 25px;
+  height: 100%;
+  margin: auto;
+  padding: 30px 70px;
+  background-color: #0b0c10 !important;
+  overflow: auto;
+  overflow-x: hidden;
+  color: white !important;
+}
+
+.modal_close {
+  color: #45a29e;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: end;
+}
+
+.modal_close:hover,
+.modal_close:focus {
+  color: #66fcf1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal h4,
+.modal h5 {
+  font-size: 20px;
+  font-family: "Play", sans-serif;
+  margin-bottom: 10px;
+}
+
+.modal h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center !important;
+  color: #66fcf1;
+}
+
+.modal h5 {
+  margin: 0;
+  font-size: 23px;
+  color: #66fcf1;
+  text-transform: uppercase;
+  text-align: justify!important;
+  margin-bottom: 1.2em;
+}
+
+.bullet {
+  margin-bottom: 2em;
+}
+
+
+
+.description {
+  width: 100%;
+  height: auto;
+  font-family: "Play", sans-serif;
+  text-align: center;
+  padding: 20px;
+  line-height: 2em;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-align: justify!important;
+}
+
+
+
+.modal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+/*Small screen*/
+
+@media (max-width: 576px) {
+  
+  
+  .modal {
+      border: 20px solid rgba(0, 0, 0, 0);
+  }
+  .modal-content {
+      width: 97%;
+      padding: 15px 20px;
+  }
+  .description,
+  .details {
+      font-size: 14px;
+  }
+  .modal h4 {
+      font-size: 22px;
+  }
+  .modal h5 {
+      font-size: 18px;
+  }
+  .modal button {
+      font-size: 18px;
+  }
+  .social-media-icons a {
+      width: 40px;
+      height: 40px;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 19px;
+  }
+  .social-media-icons {
+      height: 130px;
+  }
+  
+}
+
+
+/*Mobile*/
+
+@media (min-width: 577px) and (max-width: 767px) {
+  
+  .modal-content {
+      width: 90%;
+      padding: 15px 20px;
+  }
+  .description,
+  .details {
+      font-size: 15px;
+  }
+  .modal h4 {
+      font-size: 23px;
+  }
+  .modal h5 {
+      font-size: 18px;
+  }
+  .modal button {
+      font-size: 19px;
+  }
+}
+
+
+/*Tablet*/
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  
+  .modal-content {
+      width: 93%;
+      padding: 20px 30px;
+  }
+  .modal-div p {
+      -webkit-line-clamp: 3;
+  }
+}
+
+
+.panel-group .panel{
+  background-color: #0b0c10;
+  border:none;
+  box-shadow:none;
+  border-radius: 10px;
+  margin-bottom:11px;
+}
+.panel .panel-heading{
+  padding: 0;
+  border-radius:10px;
+  border: none;
+}
+.panel-heading a{
+  text-decoration:none;
+  color:white!important;
+  display: block;
+  border:none;
+  padding:20px 35px 20px;
+  font-size: 20px;
+  background-color:#0b0c10;
+  font-weight:600;
+  position: relative;
+  color:#fff;
+  box-shadow:none;
+  transition:all 0.1s ease 0;
+}
+.panel-heading a:after, .panel-heading a.collapsed:after{
+  content: "\f068";
+  font-family: fontawesome;
+  text-align: center;
+  position: absolute;
+  left:-20px;
+  top: 10px;
+  color:#0b0c10 !important;
+  background-color:#66fcf1;
+  border: 5px solid #66fcf1;
+  font-size: 15px;
+  width: 40px;
+  height:40px;
+  line-height: 30px;
+  border-radius: 50%;
+  transition:all 0.3s ease 0s;
+}
+.panel-heading:hover a:after,
+.panel-heading:hover a.collapsed:after{
+  transform:rotate(360deg);
+}
+.panel-heading a.collapsed:after{
+  content: "\f067";
+}
+#accordion .panel-body{
+  background: color #c5c6c7;;
+  color:white;
+  line-height: 25px;
+  padding: 10px 25px 20px 35px ;
+  border-top:none;
+  font-size:14px;
+  position: relative;
+}
+.text-white{
+  color:#66fcf1;
+  text-transform: uppercase;
+}
+
+.submitBtn{
+  height: 48px;
+  width:150px;
+  border-radius: 24px;
+  font-size: 16px;
+    outline: none;
+    background: none;
+    display: block;
+    margin: 0px 20px 20px 20px;
+    text-align: center;
+  border-color: #45A29E;
+  color: rgb(0, 0, 0);
+  background-color: #66fcf1;
+ /*background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);*/
+  transition: all 150ms ease-in-out;
+
+}
+.submitBtn:hover {
+  background: 	#303030;
+  box-shadow: 0 0 10px 0 #45A29E inset, 0 0 10px 4px #66fcf1;
+  color: rgb(255, 255, 255);
+}

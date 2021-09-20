@@ -1,9 +1,15 @@
 body {
-    font-family: "Open Sans", sans-serif;
     color: #272829;
     background: #1f2833;
     background-size: 300% 300%;
     
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 32px;
+  color: #66fcf1;
+  padding-bottom: 50px;
 }
 
 
@@ -17,9 +23,7 @@ a {
     text-decoration: none;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Play", sans-serif;
-  }
+  
   
   /*--------------------------------------------------------------
   # Back to top button
@@ -60,97 +64,6 @@ a {
     height:210px;
     width:500px;
   }*/
-
-  #hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 56px;
-    color: rgb(255, 255, 255);
-    letter-spacing: 3px;
-    font-family: 'GILC____';
-    font-style: bold;
-  }@font-face {
-    font-family: 'GILC____';
-    font-style: normal;
-    src: url("../fonts/GILC____.TTF");
-  }
-  
-  
-  #hero h2 {
-    color:#66fcf1;
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: 300;
-    font-style: bold;
-  }
-  
-  #hero .btn-get-started {
-    font-size: 64px;
-    transition: 0.5s;
-    color: #66fcf1;
-    height: 60px;
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #hero .btn-get-started:hover {
-    padding-top: 10px;
-    color: #c5c6c7;
-    margin: auto;
-  }
-  
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
-    }
-  }
-  
-  @media (max-width: 990px) {
-    #hero h1 {
-      text-align: center;
-    }
-    #hero h2 {
-      text-align: center;
-    }
-    /* #hero .image1 {
-      height: 140px !important;
-      width: 250px !important;
-    } */
-  }
-
-  @media (max-width: 768px) {
-    #hero h1 {
-      font-size: 40px;
-      line-height: 36px;
-      text-align: center;
-    }
-    #hero h2 {
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 480px) {
-    #hero .image {
-      height: 84px;
-      width: 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #hero .btn-get-started {
-      padding-top: 70px;
-    }
-    #hero .btn-get-started:hover {
-      padding-top: 80px;
-    }
-  }
-  
   /*--------------------------------------------------------------
   # Sections General
   --------------------------------------------------------------*/

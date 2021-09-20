@@ -89,6 +89,8 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['file'])){
                 
                 $insert_ev = $conn->query("INSERT INTO events (email) VALUE ('$email')");
 			    $insert_ws = $conn->query("INSERT INTO workshops (email) VALUE ('$email')");
+                $insert_pp = $conn->query("INSERT INTO paperpres (email) VALUE ('$email')");
+			    
                  
                     if($insert){ 
 

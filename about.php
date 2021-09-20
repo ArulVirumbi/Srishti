@@ -15,11 +15,13 @@ session_start();
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  
-  <link rel = "icon" href = "assets/img/logo.png" type = "image/x-icon">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -62,8 +64,8 @@ session_start();
         <li><a href="WORKSHOPS" class="nav-link scrollto "><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
         <li><a href="#" class="nav-link scrollto active"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
         <li><a href="TEAM" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
-      <li><a href="FAQ" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ</span></a></li>
-        <li><a href="CONTACT" class="nav-link scrollto"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+        <li><a href="SCHEDULE" class="nav-link scrollto"><i class="fas fa-hourglass-half"></i><span>Schedule</span></a></li>
+      <li><a href="FAQ-CONTACT" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ / Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -95,70 +97,26 @@ session_start();
       
         <h3>Shristi 2k21</h3>
       
-        <!-- Tabs -->
-        <ul class="nav nav-pills mb-3">
-          <li>
-            <a class="nav-link active" data-bs-toggle="pill" href="#tab1">About</a>
-          </li>
-          <li>
-            <a class="nav-link" data-bs-toggle="pill" href="#tab2">When</a>
-          </li>
-          <li>
-            <a class="nav-link" data-bs-toggle="pill" href="#tab3">where</a>
-          </li>
-        </ul><!-- End Tabs -->
+       
 
         <!-- Tab Content -->
         <div class="tab-content">
 
           <div class="tab-pane fade show active" id="tab1">
-            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-check2"></i>
-              <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-            </div>
-            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-check2"></i>
-              <h4>Incidunt non veritatis illum ea ut nisi</h4>
-            </div>
-            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+          <p>PSG College of Technology is always known for the quality of the outgoing engineers who are enriched with experience and skills The institution has always backed the students by providing platforms to establish themselves as unique individuals. one such platform was The Students Chapter of IEEE which was initiated in the year 1974 with much enthusiasm.<br><br> To make the IEEE Students Chapter 12951 as a talking point in the academia, an annual technical symposium was set into motion from the year 2006. And till date SRISHTI adheres to the standards of the institution. Encompassing a plethora of workshops, events, guest lectures and seminars, SRISHTI strives to <b>UNLEASH THE TALENT WITHIN</b></p>
+            
+            
+            
           </div><!-- End Tab 1 Content -->
 
-          <div class="tab-pane fade show" id="tab2">
-            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-check2"></i>
-              <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-            </div>
-            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-check2"></i>
-              <h4>Incidunt non veritatis illum ea ut nisi</h4>
-            </div>
-            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-          </div><!-- End Tab 2 Content -->
-
-          <div class="tab-pane fade show" id="tab3">
-            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-check2"></i>
-              <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-            </div>
-            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
-            <div class="d-flex align-items-center mb-2">
-              <i class="bi bi-check2"></i>
-              <h4>Incidunt non veritatis illum ea ut nisi</h4>
-            </div>
-            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-          </div><!-- End Tab 3 Content -->
+          
 
         </div>
 
       </div>
 
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
-        <img src="assets/img/psg1.jpg" class="img-fluid" alt="" width="1000px" height="800px">
+        <img src="assets/img/psg.jpg" class="img-fluid" alt="" width="1000px" height="800px">
       </div>
 
     </div><!-- End Feature Tabs -->
@@ -175,12 +133,11 @@ session_start();
       <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
         <div class="row align-self-center gy-4 cont-row">
            
-          <div class="d-flex align-items-center mb-2 title-head" >
+          <div class="d-align-items-center mb-2 title-head" >
             
             <h4>IEEE STUDENTS CHAPTER 12951</h4>
           </div>
-          <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.<br>
-          Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+          <p>The Students Chapter of IEEE at PSG College of Technology was founded in 1974 with the aim to increase the participation of students in research and encourage the development of new ideas in their respective fields. PSG is always known to raise the bar in terms of the quality of engineering and is one of the first institutions to have a Students branch of IEEE.<br>The IEEE Students Chapter of PSG Tech has actively been involved in organizing top notch technical fests every year that has evoked the interest and involvement of students from various parts of the country. It is the biggest Technical Association in PSG College of Technology.</p>
           
             
           
@@ -213,12 +170,10 @@ session_start();
 
         <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content">
-            <h3>Who We Are</h3>
-            <h2>PSG College Of Technology</h2>
+            
+            <h2>IEEE</h2>
             <p>
-              Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
-            <br>
-            Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inve
+            Institute of Electrical and Electronics Engineers (IEEE) is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.IEEE and its members inspire a global community to innovate for a better tomorrow, through its more than 420,000 members in over 160 countries, and by means of its highly cited publications, conferences, technology standards, and professional and educational activities. The core mission of IEEE is to fasten technological innovation and excellence for the benefit of humanity.
             </p>
             
             <div class="text-center text-lg-start">
@@ -231,7 +186,7 @@ session_start();
         </div>
 
         <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/psg.jpg" class="img-fluid" alt="">
+          <img src="assets/img/Logo-IEEE.jpg" class="img-fluid" alt="">
         </div>
 
       </div>
@@ -239,98 +194,47 @@ session_start();
 
   </section><!-- End About Section -->
 
-    
 
-    
-  <div class="container" data-aos="fade-up">
-        <div class="row padtb">
-            <div class="col-md-3 col-sm-6 counterbox">
-                <div class="counter">
-                    <div class="counter-icon">
-                        <i class="fa fa-globe"></i>
-                    </div>
-                    <h3>Technical events</h3>
-                    <span class="counter-value">25</span>
+  <div class="container"data-aos="fade-up">>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="counter">
+                <div class="counter-icon">
+                    <i class="fa fa-globe"></i>
                 </div>
+                <h3>Technical Event</h3>
+                <span class="counter-value">15</span>
             </div>
-            
-            <div class="col-md-3 col-sm-6 counterbox">
-                <div class="counter orange">
-                    <div class="counter-icon">
-                        <i class="fa fa-rocket"></i>
-                    </div>
-                    <h3>Non-technical events</h3>
-                    <span class="counter-value">25</span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter purple">
+                <div class="counter-icon">
+                    <i class="fa fa-briefcase"></i>
                 </div>
+                <h3>Nontechnical Event</h3>
+                <span class="counter-value">12</span>
             </div>
-            <div class="col-md-3 col-sm-6 counterbox">
-                <div class="counter green">
-                    <div class="counter-icon">
-                        <i class="fa fa-rocket"></i>
-                    </div>
-                    <h3>workshop</h3>
-                    <span class="counter-value">6</span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter">
+                <div class="counter-icon">
+                    <i class="fa fa-globe"></i>
                 </div>
+                <h3>Workshop</h3>
+                <span class="counter-value">4</span>
             </div>
-            <div class="col-md-3 col-sm-6 counterbox">
-                <div class="counter blue">
-                    <div class="counter-icon">
-                        <i class="fa fa-rocket"></i>
-                    </div>
-                    <h3>paper presentation</h3>
-                    <span class="counter-value">4</span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter purple">
+                <div class="counter-icon">
+                    <i class="fa fa-briefcase"></i>
                 </div>
+                <h3>paper presentation</h3>
+                <span class="counter-value">6</span>
             </div>
         </div>
     </div>
-
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services section-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>OUR WORKS</h2>
-          </div>
-  
-          <div class="row">
-            <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4><a href="">TECHNICAL EVENTS</a></h4>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-              </div>
-            </div>
-  
-            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="">NON-TECHNICAL EVENTS</a></h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-              </div>
-            </div>
-  
-            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4><a href="">WORKSHOP</a></h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-              </div>
-            </div>
-  
-            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-layer"></i></div>
-                <h4><a href="">PAPER PRESENTATION</a></h4>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section>
-    
-  </div>
+</div>
 </div>
 </div>
     
@@ -363,23 +267,23 @@ session_start();
  
  
   
-  <script>
-      $(document).ready(function(){
-    $('.counter-value').each(function(){
-        $(this).prop('Counter',0).animate({
-            Counter: $(this).text()
-        },{
-            duration: 3500,
-            easing: 'swing',
-            step: function (now){
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-});
-  </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+ <script>
+ $(document).ready(function(){
+     $('.counter-value').each(function(){
+         $(this).prop('Counter',0).animate({
+             Counter: $(this).text()
+         },{
+             duration: 3500,
+             easing: 'swing',
+             step: function (now){
+                 $(this).text(Math.ceil(now));
+             }
+         });
+     });
+ });
 
- 
+ </script>
    
 
 </body>

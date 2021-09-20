@@ -16,10 +16,13 @@ session_start();
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
    <!-- Vendor CSS Files -->
    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -30,12 +33,13 @@ session_start();
   <script src="https://kit.fontawesome.com/a74d0f3882.js" crossorigin="anonymous"></script>
 
   <link href="assets/css/contact.css" rel="stylesheet">
+  <link href="assets/css/faq.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
   <link href="assets/css/common-styles.css" rel="stylesheet">
 
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	
 	<script type="text/javascript">
         $(document).ready(function () {
@@ -113,7 +117,7 @@ session_start();
 
 <body>
 
-<i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #d8a31c"></i>
+<i class="bi bi-list mobile-nav-toggle d-xl-none" style="color: #66fcf1"></i>
 
 <header id="header" class="d-flex flex-column justify-content-center">
 
@@ -127,8 +131,8 @@ session_start();
       <li><a href="WORKSHOPS" class="nav-link scrollto"><i class="fas fa-chalkboard-teacher"></i> <span>Workshop</span></a></li>
       <li><a href="ABOUT" class="nav-link scrollto"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
       <li><a href="TEAM" class="nav-link scrollto"><i class="fas fa-users"></i> <span>Team</span></a></li>
-      <li><a href="FAQ" class="nav-link scrollto"><i class="fas fa-question"></i> <span>FAQ</span></a></li>
-      <li><a href="#" class="nav-link scrollto active"><i class="fas fa-paper-plane"></i> <span>Contact</span></a></li>
+        <li><a href="SCHEDULE" class="nav-link scrollto"><i class="fas fa-hourglass-half"></i><span>Schedule</span></a></li>
+      <li><a href="#" class="nav-link scrollto active"><i class="fas fa-question"></i> <span>FAQ / Contact</span></a></li>
     </ul>
   </nav><!-- .nav-menu -->
 
@@ -139,19 +143,597 @@ session_start();
     <div class="container d-flex align-items-center justify-content-center">
 
       <div class="logo">
-        <h1>CONTACT US</h1>
+        <h1>FAQ</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     </div>
   </div>
+  <div class="container-fluid main-content">
+  <div class="row padrl">
+    
+      <div class="col-lg-4 fav_list">
+          <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+              <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1" aria-selected="true">
+                  <i class="fa fa-question-circle"></i>&emsp;Login
+              </a>
+              <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2" aria-selected="false">
+                  <i class="fa fa-question-circle"></i>&emsp;Profile
+              </a>
+              <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3" aria-selected="false">
+                  <i class="fa fa-question-circle"></i>&emsp;Account
+              </a>
+              <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4" aria-selected="false">
+                  <i class="fa fa-question-circle"></i>&emsp;Favorites
+              </a>
+              <a href="#tab5" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab5" aria-selected="false">
+                  <i class="fa fa-question-circle"></i>&emsp;Transactions
+              </a>
+              <a href="#tab6" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab6" aria-selected="false">
+                  <i class="fa fa-question-circle"></i>&emsp;General help
+              </a>
+              <a href="" class="nav-link" data-toggle="pill" role="tab">
+                <i class="fas fa-paper-plane"></i>&emsp;contact
+            </a>
+          </div>
+      </div>
+      
+      <div class="col-lg-8 padleft">
+          <div class="tab-content" id="faq-tab-content">
+              <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+               
+                  <h2 class=" text-white">Login</h2>
+                   <span class="loader pull-right"><span class="loader-inner"></span></span>
+                  <hr></br>
+                  <h1><a ></a></h1>
+                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                       
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a class="first collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is Lorem Ipsum?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                      It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                      remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                                      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                                      software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Why do we use it?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>It is a long established fact that a reader will be distracted by the readable content
+                                     of a page when looking at its layout. The point of using Lorem
+                                      Ipsum is that it has a more-or-less normal distribution of letters,
+                                       as opposed to using 'Content here, content here', making it look like readable English.
+                                       </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Where does it come from?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                     It has roots in a piece of classical Latin literature from 45 BC, 
+                                     making it over 2000 years old. Richard McClintock, a Latin professor 
+                                     at Hampden-Sydney College in Virginia, looked up one of the more obscure 
+                                     Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                    Where can I get some?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                            <div class="panel-body">
+                                <p>There are many variations of passages of Lorem Ipsum available, 
+                                    but the majority have suffered alteration in some form, by injected humour, 
+                                    or randomised words which don't look even slightly believable. 
+                                    If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                                    anything embarrassing hidden in the middle of text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                     
+                      
+                  
+             </div>
+              <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                <h2 class=" text-white">Profile</h2>
+                   <span class="loader pull-right"><span class="loader-inner"></span></span>
+                  <hr></br>
+                  <h1><a ></a></h1>
+                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                       
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a class="first" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is Lorem Ipsum?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                      It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                      remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                                      Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                                      software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Why do we use it?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>It is a long established fact that a reader will be distracted by the readable content
+                                     of a page when looking at its layout. The point of using Lorem
+                                      Ipsum is that it has a more-or-less normal distribution of letters,
+                                       as opposed to using 'Content here, content here', making it look like readable English.
+                                       </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Where does it come from?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                     It has roots in a piece of classical Latin literature from 45 BC, 
+                                     making it over 2000 years old. Richard McClintock, a Latin professor 
+                                     at Hampden-Sydney College in Virginia, looked up one of the more obscure 
+                                     Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                    Where can I get some?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                            <div class="panel-body">
+                                <p>There are many variations of passages of Lorem Ipsum available, 
+                                    but the majority have suffered alteration in some form, by injected humour, 
+                                    or randomised words which don't look even slightly believable. 
+                                    If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                                    anything embarrassing hidden in the middle of text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+              </div>
+              <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                <h2 class=" text-white">Account</h2>
+                <span class="loader pull-right"><span class="loader-inner"></span></span>
+               <hr></br>
+               <h1><a ></a></h1>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                 <div class="panel panel-default">
+                    
+                     <div class="panel-heading" role="tab" id="headingOne">
+                         <h4 class="panel-title">
+                             <a class="first" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                 What is Lorem Ipsum?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                         <div class="panel-body">
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                   It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                   remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                                   Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                                   software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingTwo">
+                         <h4 class="panel-title">
+                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                 Why do we use it?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                         <div class="panel-body">
+                             <p>It is a long established fact that a reader will be distracted by the readable content
+                                  of a page when looking at its layout. The point of using Lorem
+                                   Ipsum is that it has a more-or-less normal distribution of letters,
+                                    as opposed to using 'Content here, content here', making it look like readable English.
+                                    </p>
+                             
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 Where does it come from?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                         <div class="panel-body">
+                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                  It has roots in a piece of classical Latin literature from 45 BC, 
+                                  making it over 2000 years old. Richard McClintock, a Latin professor 
+                                  at Hampden-Sydney College in Virginia, looked up one of the more obscure 
+                                  Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                 Where can I get some?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                         <div class="panel-body">
+                             <p>There are many variations of passages of Lorem Ipsum available, 
+                                 but the majority have suffered alteration in some form, by injected humour, 
+                                 or randomised words which don't look even slightly believable. 
+                                 If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                                 anything embarrassing hidden in the middle of text.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+              </div>
+              <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+                <h2 class=" text-white">Favorites</h2>
+                <span class="loader pull-right"><span class="loader-inner"></span></span>
+               <hr></br>
+               <h1><a ></a></h1>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                 <div class="panel panel-default">
+                    
+                     <div class="panel-heading" role="tab" id="headingOne">
+                         <h4 class="panel-title">
+                             <a class="first" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                 What is Lorem Ipsum?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                         <div class="panel-body">
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                   It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                   remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                                   Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                                   software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingTwo">
+                         <h4 class="panel-title">
+                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                 Why do we use it?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                         <div class="panel-body">
+                             <p>It is a long established fact that a reader will be distracted by the readable content
+                                  of a page when looking at its layout. The point of using Lorem
+                                   Ipsum is that it has a more-or-less normal distribution of letters,
+                                    as opposed to using 'Content here, content here', making it look like readable English.
+                                    </p>
+                             
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 Where does it come from?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                         <div class="panel-body">
+                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                  It has roots in a piece of classical Latin literature from 45 BC, 
+                                  making it over 2000 years old. Richard McClintock, a Latin professor 
+                                  at Hampden-Sydney College in Virginia, looked up one of the more obscure 
+                                  Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                 Where can I get some?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                         <div class="panel-body">
+                             <p>There are many variations of passages of Lorem Ipsum available, 
+                                 but the majority have suffered alteration in some form, by injected humour, 
+                                 or randomised words which don't look even slightly believable. 
+                                 If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                                 anything embarrassing hidden in the middle of text.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+              </div>
+              <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5">
+                <h2 class=" text-white">Transactions</h2>
+                <span class="loader pull-right"><span class="loader-inner"></span></span>
+               <hr></br>
+               <h1><a ></a></h1>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                 <div class="panel panel-default">
+                    
+                     <div class="panel-heading" role="tab" id="headingOne">
+                         <h4 class="panel-title">
+                             <a class="first" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                 What is Lorem Ipsum?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                         <div class="panel-body">
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                   It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                   remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                                   Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                                   software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingTwo">
+                         <h4 class="panel-title">
+                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                 Why do we use it?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                         <div class="panel-body">
+                             <p>It is a long established fact that a reader will be distracted by the readable content
+                                  of a page when looking at its layout. The point of using Lorem
+                                   Ipsum is that it has a more-or-less normal distribution of letters,
+                                    as opposed to using 'Content here, content here', making it look like readable English.
+                                    </p>
+                             
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 Where does it come from?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                         <div class="panel-body">
+                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                  It has roots in a piece of classical Latin literature from 45 BC, 
+                                  making it over 2000 years old. Richard McClintock, a Latin professor 
+                                  at Hampden-Sydney College in Virginia, looked up one of the more obscure 
+                                  Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                 Where can I get some?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                         <div class="panel-body">
+                             <p>There are many variations of passages of Lorem Ipsum available, 
+                                 but the majority have suffered alteration in some form, by injected humour, 
+                                 or randomised words which don't look even slightly believable. 
+                                 If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                                 anything embarrassing hidden in the middle of text.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+                  
+              </div>
+              <div class="tab-pane" id="tab6" role="tabpanel" aria-labelledby="tab6">
+                <h2 class=" text-white">General help</h2>
+                <span class="loader pull-right"><span class="loader-inner"></span></span>
+               <hr></br>
+               <h1><a ></a></h1>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                 <div class="panel panel-default">
+                    
+                     <div class="panel-heading" role="tab" id="headingOne">
+                         <h4 class="panel-title">
+                             <a class="first" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                 What is Lorem Ipsum?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                         <div class="panel-body">
+                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                   It has survived not only five centuries, but also the leap into electronic typesetting, 
+                                   remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                                   Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                                   software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingTwo">
+                         <h4 class="panel-title">
+                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                 Why do we use it?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                         <div class="panel-body">
+                             <p>It is a long established fact that a reader will be distracted by the readable content
+                                  of a page when looking at its layout. The point of using Lorem
+                                   Ipsum is that it has a more-or-less normal distribution of letters,
+                                    as opposed to using 'Content here, content here', making it look like readable English.
+                                    </p>
+                             
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                 Where does it come from?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                         <div class="panel-body">
+                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                  It has roots in a piece of classical Latin literature from 45 BC, 
+                                  making it over 2000 years old. Richard McClintock, a Latin professor 
+                                  at Hampden-Sydney College in Virginia, looked up one of the more obscure 
+                                  Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="headingThree">
+                         <h4 class="panel-title">
+                             <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapseThree">
+                                 Where can I get some?
+                                 <span> </span>
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                         <div class="panel-body">
+                             <p>There are many variations of passages of Lorem Ipsum available, 
+                                 but the majority have suffered alteration in some form, by injected humour, 
+                                 or randomised words which don't look even slightly believable. 
+                                 If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                                 anything embarrassing hidden in the middle of text.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
   <div class="container-fluid">
   <section id="contact" class="contact section-bg">
+    <div class="contact-title">Contact Us</div>
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
 
         <div class="row">
           <div class="col-lg-6">
@@ -166,7 +748,7 @@ session_start();
             <div class="info-box  mb-4 effect7">
               <i class="fas fa-envelope"></i>
               <h3>Email Us</h3>
-              <a href= "mailto:srishti2k21@gmail.com" target="_blank"><p>srishti2k21@gmail.com<br></p></a>
+              <a href= "mailto:teamsrishti2k21@gmail.com" target="_blank"><p>teamsrishti2k21@gmail.com<br></p></a>
             </div>
           </div>
 
